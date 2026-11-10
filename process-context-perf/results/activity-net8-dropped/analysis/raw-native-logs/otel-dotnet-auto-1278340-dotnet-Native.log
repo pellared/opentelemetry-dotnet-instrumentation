@@ -1,0 +1,14 @@
+[2026-11-09T23:28:03.988526226Z] [1278340|1278340] [info] OpenTelemetry CLR Profiler 1.19.2 on Linux (amd64)
+[2026-11-09T23:28:03.988804585Z] [1278340|1278340] [info] IsStandaloneDeployment: Detected standalone deployment: OpenTelemetry.AutoInstrumentation.dll found at '/home/splunker/opentelemetry-dotnet-instrumentation/bin/tracer-home/net/OpenTelemetry.AutoInstrumentation.dll'.
+[2026-11-09T23:28:03.989626662Z] [1278340|1278347] [info] Initializing ReJIT request thread.
+[2026-11-09T23:28:03.989655882Z] [1278340|1278340] [info] NGEN is disabled.
+[2026-11-09T23:28:03.990032505Z] [1278340|1278340] [info] Profiler filepath: /home/splunker/opentelemetry-dotnet-instrumentation/bin/tracer-home/linux-x64/OpenTelemetry.AutoInstrumentation.Native.so
+[2026-11-09T23:28:03.990049635Z] [1278340|1278340] [info] Profiler attached.
+[2026-11-09T23:28:04.000626190Z] [1278340|1278340] [info] COR library: System.Private.CoreLib 8.0.0
+[2026-11-09T23:28:04.000798235Z] [1278340|1278340] [info] UnsafeAccessorTypeAttribute metadata redirection enabled: false
+[2026-11-09T23:28:04.915022543Z] [1278340|1278340] [info] ModuleLoadFinished: OpenTelemetry.AutoInstrumentation.Loader loaded into AppDomain 100377683141664 [clrhost]
+[2026-11-09T23:28:04.953274499Z] [1278340|1278340] [info] Rewriting PInvokes to native: /home/splunker/opentelemetry-dotnet-instrumentation/bin/tracer-home/linux-x64/OpenTelemetry.AutoInstrumentation.Native.so
+[2026-11-09T23:28:31.163507367Z] [1278340|1278348] [info] RedirectAssemblyReferences: redirecting [Google.Protobuf] from_version=3.31.1.0 to_version=3.36.2.0 previous_redirects=0
+[2026-11-09T23:28:31.182675111Z] [1278340|1278347] [info] Exiting ReJIT request thread.
+[2026-11-09T23:28:31.182799465Z] [1278340|1278340] [info] Exiting...
+[2026-11-09T23:28:31.182825026Z] [1278340|1278340] [info] Stats: Total time: 27194ms | Total time in Callbacks: 27ms [Initialize=1ms, ModuleLoadFinished=25ms/55, CallTargetRequestRejit=0ms/0, CallTargetRewriter=0ms/0, AssemblyLoadFinished=0ms/55, ModuleUnloadStarted=0ms/0, JitCompilationStarted=0ms/0, JitInlining=0ms/0, JitCacheFunctionSearchStarted=0ms/0, InitializeProfiler=0ms/0]

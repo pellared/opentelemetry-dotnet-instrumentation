@@ -1,0 +1,348 @@
+{
+  "schema_version": 2,
+  "suite": "tiering-off-net10-root",
+  "process_analysis_sha256": "1c172ff07c04d4c984b20b78427e957507ce18eda94b4297d1d25c3aaf03575e",
+  "native_audit_sha256": "a92bbf54a660d2a2cfbd8e1aaa0002b3d274256b0205f582daa5cd5717515ecf",
+  "quarter_size": 5,
+  "inspection_rule": "Actual or Result absolute first-to-last quarter median change >=2%; zero initial median uses1ns. Descriptive inspection only; never an exclusion rule.",
+  "interpretation": "Result subtracts a constant per-process overhead, so relative percent changes may be larger than Raw Actual changes. A flag alone does not prove tier transition or external interference.",
+  "all_measurements_retained": true,
+  "processes": [
+    {
+      "method": "Root",
+      "profile": "AutomaticLink",
+      "block": 0,
+      "pid": 1288561,
+      "actual": {
+        "first_quarter_median_ns": 949.970771584061,
+        "last_quarter_median_ns": 950.5360310847374,
+        "change_ns": 0.5652595006763477,
+        "change_percent": 0.05950283078013374,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 947.4229568933711,
+        "last_quarter_median_ns": 947.9882163940475,
+        "change_ns": 0.5652595006764614,
+        "change_percent": 0.059662846098840205,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "AutomaticParent",
+      "block": 0,
+      "pid": 1288515,
+      "actual": {
+        "first_quarter_median_ns": 706.457774080758,
+        "last_quarter_median_ns": 706.9782314459734,
+        "change_ns": 0.5204573652154068,
+        "change_percent": 0.07367140462042343,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 703.9403254004061,
+        "last_quarter_median_ns": 704.4607827656215,
+        "change_ns": 0.5204573652154068,
+        "change_percent": 0.07393487010698419,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "ManualLink",
+      "block": 0,
+      "pid": 1288631,
+      "actual": {
+        "first_quarter_median_ns": 818.8463582522749,
+        "last_quarter_median_ns": 819.009916588223,
+        "change_ns": 0.1635583359480961,
+        "change_percent": 0.019974239892484036,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 816.3184976728376,
+        "last_quarter_median_ns": 816.4820560087857,
+        "change_ns": 0.1635583359480961,
+        "change_percent": 0.02003609331582279,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "ManualParent",
+      "block": 0,
+      "pid": 1288593,
+      "actual": {
+        "first_quarter_median_ns": 569.6303162336951,
+        "last_quarter_median_ns": 570.2047937447477,
+        "change_ns": 0.5744775110525779,
+        "change_percent": 0.10085093694642833,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 567.086025704264,
+        "last_quarter_median_ns": 567.6605032153166,
+        "change_ns": 0.5744775110525779,
+        "change_percent": 0.10130341518099772,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "AutomaticLink",
+      "block": 1,
+      "pid": 1288675,
+      "actual": {
+        "first_quarter_median_ns": 957.6493364188071,
+        "last_quarter_median_ns": 957.3044695948017,
+        "change_ns": -0.3448668240054076,
+        "change_percent": -0.03601180629384526,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 955.0868823944094,
+        "last_quarter_median_ns": 954.742015570404,
+        "change_ns": -0.3448668240054076,
+        "change_percent": -0.03610842430804562,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "AutomaticParent",
+      "block": 1,
+      "pid": 1288793,
+      "actual": {
+        "first_quarter_median_ns": 700.2728832382973,
+        "last_quarter_median_ns": 700.6210466118551,
+        "change_ns": 0.3481633735578953,
+        "change_percent": 0.049718242972351945,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 697.7294567475578,
+        "last_quarter_median_ns": 698.0776201211157,
+        "change_ns": 0.3481633735578953,
+        "change_percent": 0.0498994804061903,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "ManualLink",
+      "block": 1,
+      "pid": 1288754,
+      "actual": {
+        "first_quarter_median_ns": 820.6649886669127,
+        "last_quarter_median_ns": 821.6161410837594,
+        "change_ns": 0.9511524168467531,
+        "change_percent": 0.11590020653760025,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 818.1125599599388,
+        "last_quarter_median_ns": 819.0637123767856,
+        "change_ns": 0.9511524168467531,
+        "change_percent": 0.1162618034972196,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "ManualParent",
+      "block": 1,
+      "pid": 1288712,
+      "actual": {
+        "first_quarter_median_ns": 584.1123161627123,
+        "last_quarter_median_ns": 584.9237028478408,
+        "change_ns": 0.8113866851284683,
+        "change_percent": 0.13890936086724537,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 581.580614755632,
+        "last_quarter_median_ns": 582.3920014407604,
+        "change_ns": 0.8113866851283547,
+        "change_percent": 0.13951405265961725,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "AutomaticLink",
+      "block": 2,
+      "pid": 1288944,
+      "actual": {
+        "first_quarter_median_ns": 936.7867945061543,
+        "last_quarter_median_ns": 939.0140873611529,
+        "change_ns": 2.227292854998609,
+        "change_percent": 0.23775878012592955,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 934.2234426598619,
+        "last_quarter_median_ns": 936.4507355148604,
+        "change_ns": 2.2272928549984954,
+        "change_percent": 0.2384111501909203,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "AutomaticParent",
+      "block": 2,
+      "pid": 1288904,
+      "actual": {
+        "first_quarter_median_ns": 698.428572226442,
+        "last_quarter_median_ns": 697.694115544435,
+        "change_ns": -0.7344566820070213,
+        "change_percent": -0.1051584530205707,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 695.9126630847594,
+        "last_quarter_median_ns": 695.1782064027524,
+        "change_ns": -0.7344566820070213,
+        "change_percent": -0.10553862876290232,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "ManualLink",
+      "block": 2,
+      "pid": 1288870,
+      "actual": {
+        "first_quarter_median_ns": 806.5391152735523,
+        "last_quarter_median_ns": 806.5321862269891,
+        "change_ns": -0.006929046563186603,
+        "change_percent": -0.0008591085580267332,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 803.9785747434642,
+        "last_quarter_median_ns": 803.971645696901,
+        "change_ns": -0.006929046563186603,
+        "change_percent": -0.0008618446785568779,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "ManualParent",
+      "block": 2,
+      "pid": 1288832,
+      "actual": {
+        "first_quarter_median_ns": 586.4312883747596,
+        "last_quarter_median_ns": 579.7084396730286,
+        "change_ns": -6.722848701730982,
+        "change_percent": -1.1464000702218202,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 583.8834701878976,
+        "last_quarter_median_ns": 577.1606214861666,
+        "change_ns": -6.722848701730982,
+        "change_percent": -1.1514024706963388,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "AutomaticLink",
+      "block": 3,
+      "pid": 1289057,
+      "actual": {
+        "first_quarter_median_ns": 937.3406969251978,
+        "last_quarter_median_ns": 936.5996950671301,
+        "change_ns": -0.7410018580676478,
+        "change_percent": -0.07905363124618425,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 934.7809016123232,
+        "last_quarter_median_ns": 934.0398997542555,
+        "change_ns": -0.7410018580676478,
+        "change_percent": -0.07927011097355052,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "AutomaticParent",
+      "block": 3,
+      "pid": 1289020,
+      "actual": {
+        "first_quarter_median_ns": 694.7498416525914,
+        "last_quarter_median_ns": 694.7924204373722,
+        "change_ns": 0.04257878478085786,
+        "change_percent": 0.00612864979998573,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 692.2359265268024,
+        "last_quarter_median_ns": 692.2785053115832,
+        "change_ns": 0.04257878478085786,
+        "change_percent": 0.006150906526114497,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "ManualLink",
+      "block": 3,
+      "pid": 1288982,
+      "actual": {
+        "first_quarter_median_ns": 820.0048329136501,
+        "last_quarter_median_ns": 820.8493108015948,
+        "change_ns": 0.844477887944663,
+        "change_percent": 0.10298450131618342,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 817.4524544906096,
+        "last_quarter_median_ns": 818.2969323785542,
+        "change_ns": 0.8444778879445494,
+        "change_percent": 0.10330605569845996,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "ManualParent",
+      "block": 3,
+      "pid": 1289085,
+      "actual": {
+        "first_quarter_median_ns": 579.0248833592535,
+        "last_quarter_median_ns": 579.0258299081686,
+        "change_ns": 0.0009465489150670692,
+        "change_percent": 0.00016347292530749513,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 576.480092386877,
+        "last_quarter_median_ns": 576.4810389357921,
+        "change_ns": 0.0009465489150670692,
+        "change_percent": 0.00016419455373117842,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    }
+  ]
+}

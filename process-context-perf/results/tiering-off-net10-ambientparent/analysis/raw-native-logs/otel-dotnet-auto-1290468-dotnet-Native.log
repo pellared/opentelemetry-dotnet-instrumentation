@@ -1,0 +1,28 @@
+[2026-11-10T01:15:29.922414993Z] [1290468|1290468] [info] OpenTelemetry CLR Profiler 1.19.2 on Linux (amd64)
+[2026-11-10T01:15:29.922622500Z] [1290468|1290468] [info] IsStandaloneDeployment: Detected standalone deployment: OpenTelemetry.AutoInstrumentation.dll found at '/home/splunker/opentelemetry-dotnet-instrumentation/bin/tracer-home/net/OpenTelemetry.AutoInstrumentation.dll'.
+[2026-11-10T01:15:29.923441666Z] [1290468|1290475] [info] Initializing ReJIT request thread.
+[2026-11-10T01:15:29.923475067Z] [1290468|1290468] [info] NGEN is disabled.
+[2026-11-10T01:15:29.923851428Z] [1290468|1290468] [info] Profiler filepath: /home/splunker/opentelemetry-dotnet-instrumentation/bin/tracer-home/linux-x64/OpenTelemetry.AutoInstrumentation.Native.so
+[2026-11-10T01:15:29.923867929Z] [1290468|1290468] [info] Profiler attached.
+[2026-11-10T01:15:29.933593574Z] [1290468|1290468] [info] COR library: System.Private.CoreLib 10.0.0
+[2026-11-10T01:15:29.933738699Z] [1290468|1290468] [info] UnsafeAccessorTypeAttribute metadata redirection enabled: true
+[2026-11-10T01:15:31.573887782Z] [1290468|1290468] [info] ModuleLoadFinished: OpenTelemetry.AutoInstrumentation.Loader loaded into AppDomain 96140319966912 [clrhost]
+[2026-11-10T01:15:31.679498154Z] [1290468|1290468] [info] RedirectAssemblyReferences: redirecting [Microsoft.Extensions.Logging.Abstractions] from_version=8.0.0.0 to_version=10.0.0.0 previous_redirects=0
+[2026-11-10T01:15:31.679546905Z] [1290468|1290468] [info] RedirectAssemblyReferences: redirecting [Microsoft.Extensions.DependencyInjection.Abstractions] from_version=8.0.0.0 to_version=10.0.0.0 previous_redirects=0
+[2026-11-10T01:15:31.679571926Z] [1290468|1290468] [info] RedirectAssemblyReferences: redirecting [Microsoft.Extensions.Primitives] from_version=8.0.0.0 to_version=10.0.0.0 previous_redirects=0
+[2026-11-10T01:15:31.680041701Z] [1290468|1290468] [info] Rewriting PInvokes to native: /home/splunker/opentelemetry-dotnet-instrumentation/bin/tracer-home/linux-x64/OpenTelemetry.AutoInstrumentation.Native.so
+[2026-11-10T01:15:31.742902426Z] [1290468|1290468] [info] RedirectAssemblyReferences: redirecting [Google.Protobuf] from_version=3.31.1.0 to_version=3.36.2.0 previous_redirects=0
+[2026-11-10T01:15:32.160878304Z] [1290468|1290475] [info] Method enqueued for ReJIT for System.Diagnostics.Process.StartCore(1 params).
+[2026-11-10T01:15:32.161047549Z] [1290468|1290475] [info]     * Skipping System.Diagnostics.ActivitySource.CreateActivity: the methoddef doesn't have the right number of arguments (2 arguments).
+[2026-11-10T01:15:32.161065280Z] [1290468|1290475] [info]     * Skipping System.Diagnostics.ActivitySource.CreateActivity: the methoddef doesn't have the right number of arguments (6 arguments).
+[2026-11-10T01:15:32.161079050Z] [1290468|1290475] [info]     * Skipping System.Diagnostics.ActivitySource.CreateActivity: the methoddef doesn't have the right number of arguments (6 arguments).
+[2026-11-10T01:15:32.161123522Z] [1290468|1290475] [info] Method enqueued for ReJIT for System.Diagnostics.ActivitySource.CreateActivity(9 params).
+[2026-11-10T01:15:32.161247106Z] [1290468|1290475] [info] Request ReJIT done for 2 methods
+[2026-11-10T01:15:32.161278557Z] [1290468|1290468] [info] RegisterCallTargetDefinitions: Total integrations in profiler: 3
+[2026-11-10T01:15:32.462063741Z] [1290468|1290468] [info] [ResolveType] GetTypeRefProps [1] has failed. typeRefToken: 16777417
+[2026-11-10T01:15:32.462108242Z] [1290468|1290468] [info] [ResolveType] GetTypeRefProps [1] has failed. typeRefToken: 16777417
+[2026-11-10T01:15:32.462366360Z] [1290468|1290468] [info] [ResolveType] GetTypeRefProps [1] has failed. typeRefToken: 16777418
+[2026-11-10T01:15:32.463467495Z] [1290468|1290468] [info] *** CallTarget_RewriterCallback() Finished: System.Diagnostics.ActivitySource.CreateActivity() [IsVoid=0, IsStatic=0, IsRuntimeAsync=0, IntegrationType=OpenTelemetry.AutoInstrumentation.Instrumentations.Process.Integrations.ActivitySourceCreateActivityIntegration, Arguments=9]
+[2026-11-10T01:16:00.816691799Z] [1290468|1290475] [info] Exiting ReJIT request thread.
+[2026-11-10T01:16:00.816893085Z] [1290468|1290468] [info] Exiting...
+[2026-11-10T01:16:00.816916016Z] [1290468|1290468] [info] Stats: Total time: 30894ms | Total time in Callbacks: 46ms [Initialize=1ms, ModuleLoadFinished=41ms/59, CallTargetRequestRejit=0ms/56, CallTargetRewriter=1ms/1, AssemblyLoadFinished=0ms/59, ModuleUnloadStarted=0ms/0, JitCompilationStarted=0ms/0, JitInlining=0ms/0, JitCacheFunctionSearchStarted=0ms/0, InitializeProfiler=0ms/1]

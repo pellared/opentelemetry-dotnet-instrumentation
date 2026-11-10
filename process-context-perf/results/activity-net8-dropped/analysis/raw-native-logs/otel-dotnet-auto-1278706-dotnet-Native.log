@@ -1,0 +1,25 @@
+[2026-11-09T23:33:36.517523045Z] [1278706|1278706] [info] OpenTelemetry CLR Profiler 1.19.2 on Linux (amd64)
+[2026-11-09T23:33:36.517763142Z] [1278706|1278706] [info] IsStandaloneDeployment: Detected standalone deployment: OpenTelemetry.AutoInstrumentation.dll found at '/home/splunker/opentelemetry-dotnet-instrumentation/bin/tracer-home/net/OpenTelemetry.AutoInstrumentation.dll'.
+[2026-11-09T23:33:36.518579918Z] [1278706|1278713] [info] Initializing ReJIT request thread.
+[2026-11-09T23:33:36.518609709Z] [1278706|1278706] [info] NGEN is disabled.
+[2026-11-09T23:33:36.519011782Z] [1278706|1278706] [info] Profiler filepath: /home/splunker/opentelemetry-dotnet-instrumentation/bin/tracer-home/linux-x64/OpenTelemetry.AutoInstrumentation.Native.so
+[2026-11-09T23:33:36.519029393Z] [1278706|1278706] [info] Profiler attached.
+[2026-11-09T23:33:36.529566388Z] [1278706|1278706] [info] COR library: System.Private.CoreLib 8.0.0
+[2026-11-09T23:33:36.529689292Z] [1278706|1278706] [info] UnsafeAccessorTypeAttribute metadata redirection enabled: false
+[2026-11-09T23:33:37.442338286Z] [1278706|1278706] [info] ModuleLoadFinished: OpenTelemetry.AutoInstrumentation.Loader loaded into AppDomain 100108006478880 [clrhost]
+[2026-11-09T23:33:37.480873294Z] [1278706|1278706] [info] Rewriting PInvokes to native: /home/splunker/opentelemetry-dotnet-instrumentation/bin/tracer-home/linux-x64/OpenTelemetry.AutoInstrumentation.Native.so
+[2026-11-09T23:33:37.725015654Z] [1278706|1278713] [info] Method enqueued for ReJIT for System.Diagnostics.Process.StartCore(1 params).
+[2026-11-09T23:33:37.725187100Z] [1278706|1278713] [info]     * Skipping System.Diagnostics.ActivitySource.CreateActivity: the methoddef doesn't have the right number of arguments (2 arguments).
+[2026-11-09T23:33:37.725205050Z] [1278706|1278713] [info]     * Skipping System.Diagnostics.ActivitySource.CreateActivity: the methoddef doesn't have the right number of arguments (6 arguments).
+[2026-11-09T23:33:37.725219171Z] [1278706|1278713] [info]     * Skipping System.Diagnostics.ActivitySource.CreateActivity: the methoddef doesn't have the right number of arguments (6 arguments).
+[2026-11-09T23:33:37.725264892Z] [1278706|1278713] [info] Method enqueued for ReJIT for System.Diagnostics.ActivitySource.CreateActivity(9 params).
+[2026-11-09T23:33:37.725357475Z] [1278706|1278713] [info] Request ReJIT done for 2 methods
+[2026-11-09T23:33:37.725388956Z] [1278706|1278706] [info] RegisterCallTargetDefinitions: Total integrations in profiler: 3
+[2026-11-09T23:33:37.901397941Z] [1278706|1278706] [info] [ResolveType] GetTypeRefProps [1] has failed. typeRefToken: 16777410
+[2026-11-09T23:33:37.901435722Z] [1278706|1278706] [info] [ResolveType] GetTypeRefProps [1] has failed. typeRefToken: 16777410
+[2026-11-09T23:33:37.901678620Z] [1278706|1278706] [info] [ResolveType] GetTypeRefProps [1] has failed. typeRefToken: 16777411
+[2026-11-09T23:33:37.902723743Z] [1278706|1278706] [info] *** CallTarget_RewriterCallback() Finished: System.Diagnostics.ActivitySource.CreateActivity() [IsVoid=0, IsStatic=0, IsRuntimeAsync=0, IntegrationType=OpenTelemetry.AutoInstrumentation.Instrumentations.Process.Integrations.ActivitySourceCreateActivityIntegration, Arguments=9]
+[2026-11-09T23:34:03.634053811Z] [1278706|1278714] [info] RedirectAssemblyReferences: redirecting [Google.Protobuf] from_version=3.31.1.0 to_version=3.36.2.0 previous_redirects=0
+[2026-11-09T23:34:03.652767749Z] [1278706|1278713] [info] Exiting ReJIT request thread.
+[2026-11-09T23:34:03.652908844Z] [1278706|1278706] [info] Exiting...
+[2026-11-09T23:34:03.652930874Z] [1278706|1278706] [info] Stats: Total time: 27135ms | Total time in Callbacks: 30ms [Initialize=1ms, ModuleLoadFinished=26ms/55, CallTargetRequestRejit=0ms/52, CallTargetRewriter=1ms/1, AssemblyLoadFinished=0ms/55, ModuleUnloadStarted=0ms/0, JitCompilationStarted=0ms/0, JitInlining=0ms/0, JitCacheFunctionSearchStarted=0ms/0, InitializeProfiler=0ms/1]

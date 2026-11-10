@@ -1,0 +1,348 @@
+{
+  "schema_version": 2,
+  "suite": "controls-net10-root",
+  "process_analysis_sha256": "cc6f86a7fc3c1bd7ea4678a5288ae04b575e8ac460151d177181d397b5a89caf",
+  "native_audit_sha256": "b046b801f368b4daffcc3f2a882c5443cbc95a161abb72be7e0ff30caeee3ccf",
+  "quarter_size": 5,
+  "inspection_rule": "Actual or Result absolute first-to-last quarter median change >=2%; zero initial median uses1ns. Descriptive inspection only; never an exclusion rule.",
+  "interpretation": "Result subtracts a constant per-process overhead, so relative percent changes may be larger than Raw Actual changes. A flag alone does not prove tier transition or external interference.",
+  "all_measurements_retained": true,
+  "processes": [
+    {
+      "method": "Root",
+      "profile": "Disabled",
+      "block": 0,
+      "pid": 1287070,
+      "actual": {
+        "first_quarter_median_ns": 439.96030461487385,
+        "last_quarter_median_ns": 439.3981106822709,
+        "change_ns": -0.5621939326029519,
+        "change_percent": -0.1277828764790656,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 436.90487529050466,
+        "last_quarter_median_ns": 436.3426813579017,
+        "change_ns": -0.5621939326029519,
+        "change_percent": -0.12867650703809463,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "ExtractionOff",
+      "block": 0,
+      "pid": 1287095,
+      "actual": {
+        "first_quarter_median_ns": 425.286620460441,
+        "last_quarter_median_ns": 424.63758005025943,
+        "change_ns": -0.6490404101815557,
+        "change_percent": -0.15261246861677513,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 422.4233138780804,
+        "last_quarter_median_ns": 421.7742734678988,
+        "change_ns": -0.6490404101816125,
+        "change_percent": -0.15364691977416411,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "NoAgent",
+      "block": 0,
+      "pid": 1287026,
+      "actual": {
+        "first_quarter_median_ns": 417.12082972270366,
+        "last_quarter_median_ns": 417.13947862507223,
+        "change_ns": 0.018648902368568088,
+        "change_percent": 0.0044708633661239006,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 414.31524207266193,
+        "last_quarter_median_ns": 414.3338909750305,
+        "change_ns": 0.018648902368568088,
+        "change_percent": 0.004501138378421032,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "NoIncoming",
+      "block": 0,
+      "pid": 1286991,
+      "actual": {
+        "first_quarter_median_ns": 432.5633967499009,
+        "last_quarter_median_ns": 431.48578081648833,
+        "change_ns": -1.0776159334125737,
+        "change_percent": -0.24912323638784928,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 428.0695947284978,
+        "last_quarter_median_ns": 426.99197879508523,
+        "change_ns": -1.0776159334125737,
+        "change_percent": -0.25173848988178094,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "Disabled",
+      "block": 1,
+      "pid": 1287160,
+      "actual": {
+        "first_quarter_median_ns": 460.7467281879195,
+        "last_quarter_median_ns": 461.29891463926174,
+        "change_ns": 0.5521864513422656,
+        "change_percent": 0.11984598425993642,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 457.8854236577181,
+        "last_quarter_median_ns": 458.4376101090604,
+        "change_ns": 0.5521864513423225,
+        "change_percent": 0.12059489619287156,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "ExtractionOff",
+      "block": 1,
+      "pid": 1287189,
+      "actual": {
+        "first_quarter_median_ns": 422.5772179067866,
+        "last_quarter_median_ns": 422.4920942354865,
+        "change_ns": -0.0851236713000958,
+        "change_percent": -0.020143932917571217,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 418.0741993731262,
+        "last_quarter_median_ns": 417.9890757018261,
+        "change_ns": -0.0851236713000958,
+        "change_percent": -0.020360900392257797,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "NoAgent",
+      "block": 1,
+      "pid": 1287127,
+      "actual": {
+        "first_quarter_median_ns": 411.1038104994458,
+        "last_quarter_median_ns": 411.1346794914856,
+        "change_ns": 0.030868992039813747,
+        "change_percent": 0.007508807082645674,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 408.2859847848722,
+        "last_quarter_median_ns": 408.31685377691196,
+        "change_ns": 0.030868992039756904,
+        "change_percent": 0.007560629850189571,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "NoIncoming",
+      "block": 1,
+      "pid": 1287229,
+      "actual": {
+        "first_quarter_median_ns": 430.38328189729475,
+        "last_quarter_median_ns": 430.65710060611116,
+        "change_ns": 0.2738187088164068,
+        "change_percent": 0.06362205976246926,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 426.20949933272163,
+        "last_quarter_median_ns": 426.4833180415381,
+        "change_ns": 0.27381870881646364,
+        "change_percent": 0.06424509759757058,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "Disabled",
+      "block": 2,
+      "pid": 1287254,
+      "actual": {
+        "first_quarter_median_ns": 433.524402783548,
+        "last_quarter_median_ns": 432.9405120481928,
+        "change_ns": -0.5838907353552258,
+        "change_percent": -0.1346846294248305,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 429.33695471541336,
+        "last_quarter_median_ns": 428.7530639800582,
+        "change_ns": -0.583890735355169,
+        "change_percent": -0.13599824774976899,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "ExtractionOff",
+      "block": 2,
+      "pid": 1287283,
+      "actual": {
+        "first_quarter_median_ns": 437.01520985186926,
+        "last_quarter_median_ns": 437.41141547143195,
+        "change_ns": 0.39620561956269285,
+        "change_percent": 0.09066174600582677,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 434.266821459362,
+        "last_quarter_median_ns": 434.6630270789247,
+        "change_ns": 0.39620561956269285,
+        "change_percent": 0.09123552617518182,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "NoAgent",
+      "block": 2,
+      "pid": 1287332,
+      "actual": {
+        "first_quarter_median_ns": 417.1521711031055,
+        "last_quarter_median_ns": 417.5214900430301,
+        "change_ns": 0.36931893992459663,
+        "change_percent": 0.08853338553842516,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 412.87577137329464,
+        "last_quarter_median_ns": 413.24509031321924,
+        "change_ns": 0.36931893992459663,
+        "change_percent": 0.08945037842646997,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "NoIncoming",
+      "block": 2,
+      "pid": 1287305,
+      "actual": {
+        "first_quarter_median_ns": 443.3712614109545,
+        "last_quarter_median_ns": 443.83377041960284,
+        "change_ns": 0.46250900864833966,
+        "change_percent": 0.10431641581289952,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 440.5139283712364,
+        "last_quarter_median_ns": 440.9764373798847,
+        "change_ns": 0.46250900864833966,
+        "change_percent": 0.1049930499038787,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "Disabled",
+      "block": 3,
+      "pid": 1287421,
+      "actual": {
+        "first_quarter_median_ns": 427.63770869428254,
+        "last_quarter_median_ns": 427.34606827846903,
+        "change_ns": -0.29164041581350375,
+        "change_percent": -0.06819801198167941,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 423.2405201606552,
+        "last_quarter_median_ns": 422.9488797448417,
+        "change_ns": -0.29164041581350375,
+        "change_percent": -0.06890654413306274,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "ExtractionOff",
+      "block": 3,
+      "pid": 1287349,
+      "actual": {
+        "first_quarter_median_ns": 434.4015256177469,
+        "last_quarter_median_ns": 434.00215125917737,
+        "change_ns": -0.3993743585695597,
+        "change_percent": -0.09193668415451439,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 430.15610937870053,
+        "last_quarter_median_ns": 429.75673502013103,
+        "change_ns": -0.3993743585695029,
+        "change_percent": -0.09284405123208828,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "NoAgent",
+      "block": 3,
+      "pid": 1287405,
+      "actual": {
+        "first_quarter_median_ns": 415.25263967409376,
+        "last_quarter_median_ns": 414.6073100266046,
+        "change_ns": -0.6453296474891772,
+        "change_percent": -0.15540651300751662,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 412.23371508147653,
+        "last_quarter_median_ns": 411.58838543398736,
+        "change_ns": -0.6453296474891772,
+        "change_percent": -0.15654460658600655,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "Root",
+      "profile": "NoIncoming",
+      "block": 3,
+      "pid": 1287378,
+      "actual": {
+        "first_quarter_median_ns": 436.55953389830506,
+        "last_quarter_median_ns": 438.0292767047694,
+        "change_ns": 1.4697428064643532,
+        "change_percent": 0.33666492020918426,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 433.7019363421364,
+        "last_quarter_median_ns": 435.17167914860073,
+        "change_ns": 1.4697428064643532,
+        "change_percent": 0.3388831552979088,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    }
+  ]
+}

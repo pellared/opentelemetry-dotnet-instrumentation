@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "run_metadata": {
+    "arguments": {
+      "name": "activity-net10-root",
+      "runtime": "net10.0",
+      "cases": "ManualParent,AutomaticParent,ManualLink,AutomaticLink",
+      "methods": [
+        "Root"
+      ],
+      "tiering": null,
+      "sdk": false,
+      "launches": "3",
+      "blocks": "4",
+      "app": "/home/splunker/process-context-perf/bin/Release/net10.0/ProcessContextPerf.dll",
+      "type": "ActivityFactoryBenchmarks"
+    },
+    "command": [
+      "dotnet",
+      "/home/splunker/process-context-perf/bin/Release/net10.0/ProcessContextPerf.dll",
+      "--filter",
+      "ActivityFactoryBenchmarks.Root",
+      "--artifacts",
+      "/home/splunker/process-context-perf/results/activity-net10-root/bdn"
+    ],
+    "start": 1794260464.0595777,
+    "sourceSnapshotSha256": {
+      "Program.cs": "b7c7da4b9dcb1e0e45389302ac78b2f1eb38c950c594f819abb00c4b8de57731",
+      "ProcessContextPerf.csproj.snapshot": "d0e76e9d2b21a2fa656b1978d49d7f77034db4382c7dfc3896634359c36df394"
+    },
+    "environment": {
+      "PROCESS_BENCH_REPO": "/home/splunker/opentelemetry-dotnet-instrumentation",
+      "PROCESS_BENCH_RUNTIME": "net10.0",
+      "PROCESS_BENCH_CASES": "ManualParent,AutomaticParent,ManualLink,AutomaticLink",
+      "PROCESS_BENCH_LAUNCHES": "3",
+      "PROCESS_BENCH_SDK": "false",
+      "PROCESS_BENCH_BLOCKS": "4"
+    },
+    "end": 1794260859.2892368,
+    "exitCode": 0
+  },
+  "inputs": [
+    {
+      "path": "/home/splunker/process-context-perf/results/activity-net10-root/run.json",
+      "sha256": "69aa423ebbf5b673a87016df8ab44d15ba93281828adc701750063c59c02558d"
+    },
+    {
+      "path": "/home/splunker/process-context-perf/results/activity-net10-root/source/Program.cs",
+      "sha256": "b7c7da4b9dcb1e0e45389302ac78b2f1eb38c950c594f819abb00c4b8de57731"
+    },
+    {
+      "path": "/home/splunker/process-context-perf/results/activity-net10-root/source/ProcessContextPerf.csproj.snapshot",
+      "sha256": "d0e76e9d2b21a2fa656b1978d49d7f77034db4382c7dfc3896634359c36df394"
+    },
+    {
+      "path": "/home/splunker/process-context-perf/results/activity-net10-root/provenance/Program.json",
+      "sha256": "1bec0a81a3d8ee46db29636ed191fbdbfc3f300bd43b4ad811e919ddd511abd3"
+    },
+    {
+      "path": "/home/splunker/process-context-perf/results/activity-net10-root/provenance/ProcessContextPerf.dll",
+      "sha256": "d3232ab3fe04e4fa9e33f17eb7473ba2b51dc23b8ee0508304e489f9f5a7cd0f"
+    },
+    {
+      "path": "/home/splunker/process-context-perf/results/activity-net10-root/provenance/ProcessContextPerf.pdb",
+      "sha256": "cebf80d4ed95d9dcc89c852234bde3554c819b1675c3a0a389a1587ab86a9207"
+    },
+    {
+      "path": "/home/splunker/process-context-perf/results/activity-net10-root/bdn/results/ActivityFactoryBenchmarks-report-full.json",
+      "sha256": "2750a038d19f30dfd25b45143787e0e5fdcea05c0eed6fd1d066f195725bd840"
+    },
+    {
+      "path": "/home/splunker/process-context-perf/results/activity-net10-root/console.log",
+      "sha256": "ea71dc535ef93266dd8624bacafe5fb7c9b5939e1e60f2d90d665c8999e02888"
+    }
+  ],
+  "checks": {
+    "profiles": [
+      "ManualParent",
+      "AutomaticParent",
+      "ManualLink",
+      "AutomaticLink"
+    ],
+    "methods": [
+      "Root"
+    ],
+    "available_source_methods": [
+      "Root",
+      "RootEmptyLinks",
+      "RootExistingLink",
+      "RootAlreadyLinked",
+      "NoListeners",
+      "Dropped",
+      "DropReadingLinks",
+      "AmbientParent",
+      "SuppliedContext",
+      "SuppliedParentId",
+      "SuppliedEmptyParentId",
+      "CreateOnly",
+      "CreateThenStart",
+      "PropagationOnly"
+    ],
+    "blocks": 4,
+    "expected_processes": 16,
+    "actual_processes": 16,
+    "actual_rows_per_process": 20,
+    "result_rows_per_process": 20,
+    "all_actual_rows_retained": true,
+    "warmup_rows_per_process": 40,
+    "target_probe_coverage": 16,
+    "host_environment_used_for_job_metadata": false
+  },
+  "statistical_unit": "One independently launched process mean per profile and block; differences paired by block.",
+  "ci_assumptions": "Pointwise two-sided Student t95 on independent block differences; assumes approximately normal block differences. No multiplicity adjustment; four blocks provide limited precision.",
+  "runtime_note": "Requested runtime/sensitivity come from run.json; patch/file versions come only from target-process BENCH_PROBE when present.",
+  "source_provenance": {
+    "status": "captured_binary_and_csharp_sources_bound_by_helper",
+    "snapshots_sha256": {
+      "Program.cs": "b7c7da4b9dcb1e0e45389302ac78b2f1eb38c950c594f819abb00c4b8de57731",
+      "ProcessContextPerf.csproj.snapshot": "d0e76e9d2b21a2fa656b1978d49d7f77034db4382c7dfc3896634359c36df394"
+    },
+    "proofs": [
+      {
+        "schemaVersion": 1,
+        "appPath": "/home/splunker/process-context-perf/results/activity-net10-root/provenance/ProcessContextPerf.dll",
+        "appSha256": "d3232ab3fe04e4fa9e33f17eb7473ba2b51dc23b8ee0508304e489f9f5a7cd0f",
+        "assemblyName": "ProcessContextPerf",
+        "assemblyMvid": "89814751-9427-448e-9620-8720ec9b0d2b",
+        "pdbPath": "/home/splunker/process-context-perf/results/activity-net10-root/provenance/ProcessContextPerf.pdb",
+        "pdbSha256": "cebf80d4ed95d9dcc89c852234bde3554c819b1675c3a0a389a1587ab86a9207",
+        "peCodeViewPdbGuid": "06a6d155-c1aa-45c8-96ac-035d5dd56ec4",
+        "peCodeViewPdbStamp": 4041080215,
+        "peCodeViewPdbAge": 1,
+        "peCodeViewPdbPath": "/home/splunker/process-context-perf/bin/Release/net10.0/ProcessContextPerf-AutomaticParent-B00-1/obj/ProcessContextPerf/release_net10.0/ProcessContextPerf.pdb",
+        "portablePdbGuid": "06a6d155-c1aa-45c8-96ac-035d5dd56ec4",
+        "portablePdbStamp": 4041080215,
+        "pdbMatchesApplication": true,
+        "sourcePath": "/home/splunker/process-context-perf/results/activity-net10-root/source/Program.cs",
+        "sourceSha256": "b7c7da4b9dcb1e0e45389302ac78b2f1eb38c950c594f819abb00c4b8de57731",
+        "sourceSha1": "0813ab000dceb0bc9c8de18494b190a7b31bb80f",
+        "documentName": "/home/splunker/process-context-perf/Program.cs",
+        "documentSelection": "uniqueFileName",
+        "documentHashAlgorithmGuid": "8829d00f-11b8-4213-878b-770e8597ac16",
+        "documentHashAlgorithm": "SHA256",
+        "documentHash": "b7c7da4b9dcb1e0e45389302ac78b2f1eb38c950c594f819abb00c4b8de57731",
+        "sourceMatchesDocument": true
+      }
+    ]
+  },
+  "source_note": "Captured C# snapshot hashes match run.json and the helper-reported portable-PDB source checksums. Helper PE/PDB identities and captured assembly/PDB SHA256 hashes were validated. The helper establishes C# source binding for the captured benchmark assembly; project snapshots are separately hashed.",
+  "sdk_note": "sdk_provider=false means a minimal application ActivityListener and no application TracerProvider/exporters; attached controls still initialize SDK globals.",
+  "comparisons": [
+    {
+      "suite": "activity-net10-root",
+      "runtime": "net10.0",
+      "benchmark_type": "ActivityFactoryBenchmarks",
+      "sensitivity": {
+        "tiering": "default",
+        "sdk_provider": false
+      },
+      "method": "Root",
+      "candidate": "AutomaticParent",
+      "baseline": "ManualParent",
+      "independent_blocks": 4,
+      "degrees_of_freedom": 3,
+      "delta_mean_ns": 103.5805863655116,
+      "delta_sd_ns": 20.948676634602265,
+      "delta_standard_error_ns": 10.474338317301132,
+      "t95_critical": 3.182446305,
+      "delta_ci95_low_ns": 70.24656709029671,
+      "delta_ci95_high_ns": 136.9146056407265,
+      "actual_delta_mean_ns": 104.15126157022111,
+      "actual_delta_ci95_low_ns": 71.72169134138835,
+      "actual_delta_ci95_high_ns": 136.58083179905387,
+      "ratio_mean": 1.2792906203006784,
+      "ratio_min": 1.1852227124132169,
+      "ratio_max": 1.333251355248863,
+      "candidate_process_mean_ns": 477.17783585905545,
+      "baseline_process_mean_ns": 373.59724949354387,
+      "allocation_delta_mean_bytes_per_op": 0,
+      "paired_blocks": [
+        {
+          "block": 0,
+          "candidate_mean_ns": 474.2292820418183,
+          "baseline_mean_ns": 361.71430633983573,
+          "delta_ns": 112.51497570198256,
+          "ratio": 1.3110603416284927,
+          "candidate_actual_mean_ns": 477.9889533835748,
+          "baseline_actual_mean_ns": 364.71679973965973,
+          "actual_delta_ns": 113.27215364391509,
+          "candidate_overhead_median_ns": 3.759671341756506,
+          "baseline_overhead_median_ns": 3.002493399823995,
+          "candidate_allocated_bytes_per_op": 416,
+          "baseline_allocated_bytes_per_op": 416,
+          "allocation_delta_bytes_per_op": 0
+        },
+        {
+          "block": 1,
+          "candidate_mean_ns": 485.3829274498974,
+          "baseline_mean_ns": 364.05957926762915,
+          "delta_ns": 121.32334818226826,
+          "ratio": 1.333251355248863,
+          "candidate_actual_mean_ns": 489.6898767161117,
+          "baseline_actual_mean_ns": 368.27982556768717,
+          "actual_delta_ns": 121.41005114842454,
+          "candidate_overhead_median_ns": 4.306949266214297,
+          "baseline_overhead_median_ns": 4.220246300058038,
+          "candidate_allocated_bytes_per_op": 416,
+          "baseline_allocated_bytes_per_op": 416,
+          "allocation_delta_bytes_per_op": 0
+        },
+        {
+          "block": 2,
+          "candidate_mean_ns": 479.302582510506,
+          "baseline_mean_ns": 372.2368228573462,
+          "delta_ns": 107.06575965315977,
+          "ratio": 1.2876280719121413,
+          "candidate_actual_mean_ns": 482.1224238955892,
+          "baseline_actual_mean_ns": 375.0820276907745,
+          "actual_delta_ns": 107.04039620481467,
+          "candidate_overhead_median_ns": 2.819841385083194,
+          "baseline_overhead_median_ns": 2.845204833428246,
+          "candidate_allocated_bytes_per_op": 416,
+          "baseline_allocated_bytes_per_op": 416,
+          "allocation_delta_bytes_per_op": 0
+        },
+        {
+          "block": 3,
+          "candidate_mean_ns": 469.7965514340002,
+          "baseline_mean_ns": 396.3782895093644,
+          "delta_ns": 73.41826192463583,
+          "ratio": 1.1852227124132169,
+          "candidate_actual_mean_ns": 474.2722594875771,
+          "baseline_actual_mean_ns": 399.389814203847,
+          "actual_delta_ns": 74.88244528373014,
+          "candidate_overhead_median_ns": 4.475708053576906,
+          "baseline_overhead_median_ns": 3.011524694482609,
+          "candidate_allocated_bytes_per_op": 416,
+          "baseline_allocated_bytes_per_op": 416,
+          "allocation_delta_bytes_per_op": 0
+        }
+      ]
+    },
+    {
+      "suite": "activity-net10-root",
+      "runtime": "net10.0",
+      "benchmark_type": "ActivityFactoryBenchmarks",
+      "sensitivity": {
+        "tiering": "default",
+        "sdk_provider": false
+      },
+      "method": "Root",
+      "candidate": "AutomaticLink",
+      "baseline": "ManualLink",
+      "independent_blocks": 4,
+      "degrees_of_freedom": 3,
+      "delta_mean_ns": 75.38258170829366,
+      "delta_sd_ns": 24.691116371148357,
+      "delta_standard_error_ns": 12.345558185574179,
+      "t95_critical": 3.182446305,
+      "delta_ci95_low_ns": 36.09350567745061,
+      "delta_ci95_high_ns": 114.6716577391367,
+      "actual_delta_mean_ns": 74.62705969392141,
+      "actual_delta_ci95_low_ns": 34.70717662361511,
+      "actual_delta_ci95_high_ns": 114.54694276422771,
+      "ratio_mean": 1.1414817864380022,
+      "ratio_min": 1.0678610915238245,
+      "ratio_max": 1.176073258475204,
+      "candidate_process_mean_ns": 615.9225459735692,
+      "baseline_process_mean_ns": 540.5399642652754,
+      "allocation_delta_mean_bytes_per_op": 0,
+      "paired_blocks": [
+        {
+          "block": 0,
+          "candidate_mean_ns": 606.4030903306505,
+          "baseline_mean_ns": 528.2266602025809,
+          "delta_ns": 78.17643012806957,
+          "ratio": 1.1479978880620831,
+          "candidate_actual_mean_ns": 609.2124333804655,
+          "baseline_actual_mean_ns": 531.0389822919632,
+          "actual_delta_ns": 78.17345108850236,
+          "candidate_overhead_median_ns": 2.8093430498150966,
+          "baseline_overhead_median_ns": 2.8123220893822944,
+          "candidate_allocated_bytes_per_op": 632,
+          "baseline_allocated_bytes_per_op": 632,
+          "allocation_delta_bytes_per_op": 0
+        },
+        {
+          "block": 1,
+          "candidate_mean_ns": 624.2404456728851,
+          "baseline_mean_ns": 584.5708310077126,
+          "delta_ns": 39.6696146651725,
+          "ratio": 1.0678610915238245,
+          "candidate_actual_mean_ns": 627.0515830637656,
+          "baseline_actual_mean_ns": 588.9195218946621,
+          "actual_delta_ns": 38.13206116910351,
+          "candidate_overhead_median_ns": 2.8111373908804893,
+          "baseline_overhead_median_ns": 4.348690886949462,
+          "candidate_allocated_bytes_per_op": 632,
+          "baseline_allocated_bytes_per_op": 632,
+          "allocation_delta_bytes_per_op": 0
+        },
+        {
+          "block": 2,
+          "candidate_mean_ns": 610.2664463828216,
+          "baseline_mean_ns": 519.8203521880176,
+          "delta_ns": 90.446094194804,
+          "ratio": 1.1739949076908975,
+          "candidate_actual_mean_ns": 613.0754155087064,
+          "baseline_actual_mean_ns": 522.6402491142095,
+          "actual_delta_ns": 90.43516639449695,
+          "candidate_overhead_median_ns": 2.808969125884754,
+          "baseline_overhead_median_ns": 2.8198969261917908,
+          "candidate_allocated_bytes_per_op": 632,
+          "baseline_allocated_bytes_per_op": 632,
+          "allocation_delta_bytes_per_op": 0
+        },
+        {
+          "block": 3,
+          "candidate_mean_ns": 622.7802015079193,
+          "baseline_mean_ns": 529.5420136627907,
+          "delta_ns": 93.23818784512855,
+          "ratio": 1.176073258475204,
+          "candidate_actual_mean_ns": 625.7576261119549,
+          "baseline_actual_mean_ns": 533.9900659883721,
+          "actual_delta_ns": 91.76756012358283,
+          "candidate_overhead_median_ns": 2.9774246040355825,
+          "baseline_overhead_median_ns": 4.448052325581395,
+          "candidate_allocated_bytes_per_op": 632,
+          "baseline_allocated_bytes_per_op": 632,
+          "allocation_delta_bytes_per_op": 0
+        }
+      ]
+    }
+  ]
+}

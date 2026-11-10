@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "suite": "link-sampling-existing-net10",
+  "inputs": [
+    {
+      "path": "/home/splunker/process-context-perf/results/link-sampling-existing-net10/run.json",
+      "sha256": "c591ad4f5047a411dda30200c9a1723b196e82be00109b0510d9c62da63ea995"
+    },
+    {
+      "path": "/home/splunker/process-context-perf/results/link-sampling-existing-net10/console.log",
+      "sha256": "b40441c1e2d9d027cf63c5b1e03834d45939659355bb3664d31f4cb81b96ef84"
+    },
+    {
+      "path": "/home/splunker/process-context-perf/results/link-sampling-existing-net10/analysis/processes.json",
+      "sha256": "29504339b0a302fc7f71c807bae82a929ba4cbddab9bfbee85fdaf162fbfc07a"
+    }
+  ],
+  "expected_cells": 8,
+  "audited_cells": 8,
+  "automatic_hook_installed": 4,
+  "attached_hook_absent": 4,
+  "no_agent_native_log_absent": 0,
+  "warning_or_error_count": 0,
+  "scope": "Per-measured-PID native log evidence for the nine-argument ActivitySource.CreateActivity hook. Enqueue plus finished rewriter events prove profiler rewrite evidence, not an invocation count. Assembly/source proof is separately scoped to the captured benchmark application assembly.",
+  "processes": [
+    {
+      "suite": "link-sampling-existing-net10",
+      "runtime": "net10.0",
+      "benchmark_type": "LinkSamplingBenchmarks",
+      "method": "RootExistingLink",
+      "profile": "AutomaticLink",
+      "block": 0,
+      "pid": 1294963,
+      "exit_code": 0,
+      "profiler_attached": true,
+      "activity_hook_expected": true,
+      "job_native_log_directory": "/home/splunker/process-context-link-sampling-perf/native-logs",
+      "native_file": "/home/splunker/process-context-link-sampling-perf/native-logs/otel-dotnet-auto-1294963-dotnet-Native.log",
+      "native_sha256": "218b1430c970e38f6257588509b7ef9e49007506a3fa7e725f91317fdec03275",
+      "archived_native_file": "analysis/raw-native-logs/otel-dotnet-auto-1294963-dotnet-Native.log",
+      "activity_hook_enqueued_count": 1,
+      "activity_hook_rewrite_finished_count": 1,
+      "warning_or_error_count": 0,
+      "enqueue_evidence": [
+        "[2026-11-10T01:52:19.727550800Z] [1294963|1294971] [info] Method enqueued for ReJIT for System.Diagnostics.ActivitySource.CreateActivity(9 params)."
+      ],
+      "rewrite_evidence": [
+        "[2026-11-10T01:52:19.909112201Z] [1294963|1294963] [info] *** CallTarget_RewriterCallback() Finished: System.Diagnostics.ActivitySource.CreateActivity() [IsVoid=0, IsStatic=0, IsRuntimeAsync=0, IntegrationType=OpenTelemetry.AutoInstrumentation.Instrumentations.Process.Integrations.ActivitySourceCreateActivityIntegration, Arguments=9]"
+      ],
+      "warnings_or_errors": []
+    },
+    {
+      "suite": "link-sampling-existing-net10",
+      "runtime": "net10.0",
+      "benchmark_type": "LinkSamplingBenchmarks",
+      "method": "RootExistingLink",
+      "profile": "ManualLink",
+      "block": 0,
+      "pid": 1294997,
+      "exit_code": 0,
+      "profiler_attached": true,
+      "activity_hook_expected": false,
+      "job_native_log_directory": "/home/splunker/process-context-link-sampling-perf/native-logs",
+      "native_file": "/home/splunker/process-context-link-sampling-perf/native-logs/otel-dotnet-auto-1294997-dotnet-Native.log",
+      "native_sha256": "3d7fc6fd1252ad1a0fb00d46eb6d0ac6dbcceb3b63f78c599b3fa99609ff95d6",
+      "archived_native_file": "analysis/raw-native-logs/otel-dotnet-auto-1294997-dotnet-Native.log",
+      "activity_hook_enqueued_count": 0,
+      "activity_hook_rewrite_finished_count": 0,
+      "warning_or_error_count": 0,
+      "enqueue_evidence": [],
+      "rewrite_evidence": [],
+      "warnings_or_errors": []
+    },
+    {
+      "suite": "link-sampling-existing-net10",
+      "runtime": "net10.0",
+      "benchmark_type": "LinkSamplingBenchmarks",
+      "method": "RootExistingLink",
+      "profile": "ManualLink",
+      "block": 1,
+      "pid": 1295033,
+      "exit_code": 0,
+      "profiler_attached": true,
+      "activity_hook_expected": false,
+      "job_native_log_directory": "/home/splunker/process-context-link-sampling-perf/native-logs",
+      "native_file": "/home/splunker/process-context-link-sampling-perf/native-logs/otel-dotnet-auto-1295033-dotnet-Native.log",
+      "native_sha256": "3dff4fba227bc9d3fd1f377bc2c10e18d5bfe34b085bb40b8c658ce724452ff7",
+      "archived_native_file": "analysis/raw-native-logs/otel-dotnet-auto-1295033-dotnet-Native.log",
+      "activity_hook_enqueued_count": 0,
+      "activity_hook_rewrite_finished_count": 0,
+      "warning_or_error_count": 0,
+      "enqueue_evidence": [],
+      "rewrite_evidence": [],
+      "warnings_or_errors": []
+    },
+    {
+      "suite": "link-sampling-existing-net10",
+      "runtime": "net10.0",
+      "benchmark_type": "LinkSamplingBenchmarks",
+      "method": "RootExistingLink",
+      "profile": "AutomaticLink",
+      "block": 1,
+      "pid": 1295070,
+      "exit_code": 0,
+      "profiler_attached": true,
+      "activity_hook_expected": true,
+      "job_native_log_directory": "/home/splunker/process-context-link-sampling-perf/native-logs",
+      "native_file": "/home/splunker/process-context-link-sampling-perf/native-logs/otel-dotnet-auto-1295070-dotnet-Native.log",
+      "native_sha256": "c622f7ca9e290c155a3ea892bcb0de3c1c66574abca49fc63722cd3941fd37ab",
+      "archived_native_file": "analysis/raw-native-logs/otel-dotnet-auto-1295070-dotnet-Native.log",
+      "activity_hook_enqueued_count": 1,
+      "activity_hook_rewrite_finished_count": 1,
+      "warning_or_error_count": 0,
+      "enqueue_evidence": [
+        "[2026-11-10T01:53:29.389178777Z] [1295070|1295077] [info] Method enqueued for ReJIT for System.Diagnostics.ActivitySource.CreateActivity(9 params)."
+      ],
+      "rewrite_evidence": [
+        "[2026-11-10T01:53:29.563176900Z] [1295070|1295070] [info] *** CallTarget_RewriterCallback() Finished: System.Diagnostics.ActivitySource.CreateActivity() [IsVoid=0, IsStatic=0, IsRuntimeAsync=0, IntegrationType=OpenTelemetry.AutoInstrumentation.Instrumentations.Process.Integrations.ActivitySourceCreateActivityIntegration, Arguments=9]"
+      ],
+      "warnings_or_errors": []
+    },
+    {
+      "suite": "link-sampling-existing-net10",
+      "runtime": "net10.0",
+      "benchmark_type": "LinkSamplingBenchmarks",
+      "method": "RootExistingLink",
+      "profile": "AutomaticLink",
+      "block": 2,
+      "pid": 1295105,
+      "exit_code": 0,
+      "profiler_attached": true,
+      "activity_hook_expected": true,
+      "job_native_log_directory": "/home/splunker/process-context-link-sampling-perf/native-logs",
+      "native_file": "/home/splunker/process-context-link-sampling-perf/native-logs/otel-dotnet-auto-1295105-dotnet-Native.log",
+      "native_sha256": "c167b5cfb71b0a5ae75025b33e7f550b9ef01a6a60e7e326007f1a8461ac873e",
+      "archived_native_file": "analysis/raw-native-logs/otel-dotnet-auto-1295105-dotnet-Native.log",
+      "activity_hook_enqueued_count": 1,
+      "activity_hook_rewrite_finished_count": 1,
+      "warning_or_error_count": 0,
+      "enqueue_evidence": [
+        "[2026-11-10T01:53:57.329850754Z] [1295105|1295112] [info] Method enqueued for ReJIT for System.Diagnostics.ActivitySource.CreateActivity(9 params)."
+      ],
+      "rewrite_evidence": [
+        "[2026-11-10T01:53:57.504430073Z] [1295105|1295105] [info] *** CallTarget_RewriterCallback() Finished: System.Diagnostics.ActivitySource.CreateActivity() [IsVoid=0, IsStatic=0, IsRuntimeAsync=0, IntegrationType=OpenTelemetry.AutoInstrumentation.Instrumentations.Process.Integrations.ActivitySourceCreateActivityIntegration, Arguments=9]"
+      ],
+      "warnings_or_errors": []
+    },
+    {
+      "suite": "link-sampling-existing-net10",
+      "runtime": "net10.0",
+      "benchmark_type": "LinkSamplingBenchmarks",
+      "method": "RootExistingLink",
+      "profile": "ManualLink",
+      "block": 2,
+      "pid": 1295145,
+      "exit_code": 0,
+      "profiler_attached": true,
+      "activity_hook_expected": false,
+      "job_native_log_directory": "/home/splunker/process-context-link-sampling-perf/native-logs",
+      "native_file": "/home/splunker/process-context-link-sampling-perf/native-logs/otel-dotnet-auto-1295145-dotnet-Native.log",
+      "native_sha256": "c1af294793a591a8d9e1b373b7da20a34f72d2d6f9fe162893159f681c9b5da0",
+      "archived_native_file": "analysis/raw-native-logs/otel-dotnet-auto-1295145-dotnet-Native.log",
+      "activity_hook_enqueued_count": 0,
+      "activity_hook_rewrite_finished_count": 0,
+      "warning_or_error_count": 0,
+      "enqueue_evidence": [],
+      "rewrite_evidence": [],
+      "warnings_or_errors": []
+    },
+    {
+      "suite": "link-sampling-existing-net10",
+      "runtime": "net10.0",
+      "benchmark_type": "LinkSamplingBenchmarks",
+      "method": "RootExistingLink",
+      "profile": "ManualLink",
+      "block": 3,
+      "pid": 1295176,
+      "exit_code": 0,
+      "profiler_attached": true,
+      "activity_hook_expected": false,
+      "job_native_log_directory": "/home/splunker/process-context-link-sampling-perf/native-logs",
+      "native_file": "/home/splunker/process-context-link-sampling-perf/native-logs/otel-dotnet-auto-1295176-dotnet-Native.log",
+      "native_sha256": "5026d7e8d0d7ae86806977faed0210d05b895ca54afbf860f287bdb23ed709c7",
+      "archived_native_file": "analysis/raw-native-logs/otel-dotnet-auto-1295176-dotnet-Native.log",
+      "activity_hook_enqueued_count": 0,
+      "activity_hook_rewrite_finished_count": 0,
+      "warning_or_error_count": 0,
+      "enqueue_evidence": [],
+      "rewrite_evidence": [],
+      "warnings_or_errors": []
+    },
+    {
+      "suite": "link-sampling-existing-net10",
+      "runtime": "net10.0",
+      "benchmark_type": "LinkSamplingBenchmarks",
+      "method": "RootExistingLink",
+      "profile": "AutomaticLink",
+      "block": 3,
+      "pid": 1295210,
+      "exit_code": 0,
+      "profiler_attached": true,
+      "activity_hook_expected": true,
+      "job_native_log_directory": "/home/splunker/process-context-link-sampling-perf/native-logs",
+      "native_file": "/home/splunker/process-context-link-sampling-perf/native-logs/otel-dotnet-auto-1295210-dotnet-Native.log",
+      "native_sha256": "f7360e851697084011dbcc618b5f5b2020194a7061fbced2c4e6e081f21597cb",
+      "archived_native_file": "analysis/raw-native-logs/otel-dotnet-auto-1295210-dotnet-Native.log",
+      "activity_hook_enqueued_count": 1,
+      "activity_hook_rewrite_finished_count": 1,
+      "warning_or_error_count": 0,
+      "enqueue_evidence": [
+        "[2026-11-10T01:55:07.417048146Z] [1295210|1295217] [info] Method enqueued for ReJIT for System.Diagnostics.ActivitySource.CreateActivity(9 params)."
+      ],
+      "rewrite_evidence": [
+        "[2026-11-10T01:55:07.594658295Z] [1295210|1295210] [info] *** CallTarget_RewriterCallback() Finished: System.Diagnostics.ActivitySource.CreateActivity() [IsVoid=0, IsStatic=0, IsRuntimeAsync=0, IntegrationType=OpenTelemetry.AutoInstrumentation.Instrumentations.Process.Integrations.ActivitySourceCreateActivityIntegration, Arguments=9]"
+      ],
+      "warnings_or_errors": []
+    }
+  ]
+}

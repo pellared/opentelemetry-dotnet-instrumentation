@@ -1,0 +1,348 @@
+{
+  "schema_version": 2,
+  "suite": "controls-net10-nolisteners",
+  "process_analysis_sha256": "a102a5325135ecd924e554315b9e3d19c85269352486869b91d7dd6a921f01be",
+  "native_audit_sha256": "4852568d070949dea58cbbd09974ad551b77118ba147f2fc78a7f5ccb679f4f0",
+  "quarter_size": 5,
+  "inspection_rule": "Actual or Result absolute first-to-last quarter median change >=2%; zero initial median uses1ns. Descriptive inspection only; never an exclusion rule.",
+  "interpretation": "Result subtracts a constant per-process overhead, so relative percent changes may be larger than Raw Actual changes. A flag alone does not prove tier transition or external interference.",
+  "all_measurements_retained": true,
+  "processes": [
+    {
+      "method": "NoListeners",
+      "profile": "Disabled",
+      "block": 0,
+      "pid": 1287797,
+      "actual": {
+        "first_quarter_median_ns": 16.70445002882022,
+        "last_quarter_median_ns": 16.6952949342415,
+        "change_ns": -0.009155094578719769,
+        "change_percent": -0.05480632144683195,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 13.75418195678287,
+        "last_quarter_median_ns": 13.745026862204153,
+        "change_ns": -0.009155094578717993,
+        "change_percent": -0.06656226162693457,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "NoListeners",
+      "profile": "ExtractionOff",
+      "block": 0,
+      "pid": 1287821,
+      "actual": {
+        "first_quarter_median_ns": 16.70235709151733,
+        "last_quarter_median_ns": 16.698083646495615,
+        "change_ns": -0.004273445021716782,
+        "change_percent": -0.025585879874923112,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 13.756407533198159,
+        "last_quarter_median_ns": 13.752134088176442,
+        "change_ns": -0.004273445021716782,
+        "change_percent": -0.03106512373527437,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "NoListeners",
+      "profile": "NoAgent",
+      "block": 0,
+      "pid": 1287766,
+      "actual": {
+        "first_quarter_median_ns": 17.922784687280707,
+        "last_quarter_median_ns": 17.89090881944548,
+        "change_ns": -0.031875867835225336,
+        "change_percent": -0.17785108950088002,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 14.97977981247294,
+        "last_quarter_median_ns": 14.947903944637712,
+        "change_ns": -0.03187586783522711,
+        "change_percent": -0.21279263269734505,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "NoListeners",
+      "profile": "NoIncoming",
+      "block": 0,
+      "pid": 1287726,
+      "actual": {
+        "first_quarter_median_ns": 16.69944109648791,
+        "last_quarter_median_ns": 16.702509613629992,
+        "change_ns": 0.003068517142082783,
+        "change_percent": 0.018374969104373307,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 13.741548573310604,
+        "last_quarter_median_ns": 13.744617090452687,
+        "change_ns": 0.003068517142082783,
+        "change_percent": 0.022330213554266898,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "NoListeners",
+      "profile": "Disabled",
+      "block": 1,
+      "pid": 1287883,
+      "actual": {
+        "first_quarter_median_ns": 16.704167262516087,
+        "last_quarter_median_ns": 16.700006879352408,
+        "change_ns": -0.004160383163679171,
+        "change_percent": -0.024906259008883325,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 13.758517396636377,
+        "last_quarter_median_ns": 13.754357013472697,
+        "change_ns": -0.004160383163679171,
+        "change_percent": -0.030238600888032874,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "NoListeners",
+      "profile": "ExtractionOff",
+      "block": 1,
+      "pid": 1287905,
+      "actual": {
+        "first_quarter_median_ns": 16.711016597510373,
+        "last_quarter_median_ns": 16.704385782922035,
+        "change_ns": -0.006630814588337586,
+        "change_percent": -0.03967930107451334,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 13.914704083861105,
+        "last_quarter_median_ns": 13.908073269272768,
+        "change_ns": -0.006630814588337586,
+        "change_percent": -0.047653292146032644,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "NoListeners",
+      "profile": "NoAgent",
+      "block": 1,
+      "pid": 1287852,
+      "actual": {
+        "first_quarter_median_ns": 17.89880403960892,
+        "last_quarter_median_ns": 17.901219404017546,
+        "change_ns": 0.0024153644086268855,
+        "change_percent": 0.013494557531790186,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 14.955882002152789,
+        "last_quarter_median_ns": 14.958297366561412,
+        "change_ns": 0.002415364408623333,
+        "change_percent": 0.01614992956133765,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "NoListeners",
+      "profile": "NoIncoming",
+      "block": 1,
+      "pid": 1287936,
+      "actual": {
+        "first_quarter_median_ns": 16.70360173095039,
+        "last_quarter_median_ns": 16.694134982729746,
+        "change_ns": -0.009466748220642529,
+        "change_percent": -0.05667489187737296,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 13.905948261199498,
+        "last_quarter_median_ns": 13.896481512978857,
+        "change_ns": -0.009466748220640753,
+        "change_percent": -0.06807696996151691,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "NoListeners",
+      "profile": "Disabled",
+      "block": 2,
+      "pid": 1287966,
+      "actual": {
+        "first_quarter_median_ns": 16.720841415575926,
+        "last_quarter_median_ns": 16.696195807480983,
+        "change_ns": -0.024645608094942872,
+        "change_percent": -0.14739454482227687,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 13.926637953056604,
+        "last_quarter_median_ns": 13.90199234496166,
+        "change_ns": -0.02464560809494465,
+        "change_percent": -0.1769673928339266,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "NoListeners",
+      "profile": "ExtractionOff",
+      "block": 2,
+      "pid": 1287992,
+      "actual": {
+        "first_quarter_median_ns": 16.71123741037267,
+        "last_quarter_median_ns": 16.691657712130304,
+        "change_ns": -0.01957969824236727,
+        "change_percent": -0.11716486195220144,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 13.76335127519155,
+        "last_quarter_median_ns": 13.743771576949179,
+        "change_ns": -0.019579698242370824,
+        "change_percent": -0.14225967099789072,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "NoListeners",
+      "profile": "NoAgent",
+      "block": 2,
+      "pid": 1288061,
+      "actual": {
+        "first_quarter_median_ns": 17.89388643848068,
+        "last_quarter_median_ns": 17.905787226750512,
+        "change_ns": 0.011900788269830542,
+        "change_percent": 0.0665075656467673,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 13.6465461040993,
+        "last_quarter_median_ns": 13.658446892369131,
+        "change_ns": 0.011900788269830542,
+        "change_percent": 0.08720732835290068,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "NoListeners",
+      "profile": "NoIncoming",
+      "block": 2,
+      "pid": 1288031,
+      "actual": {
+        "first_quarter_median_ns": 16.711119760149632,
+        "last_quarter_median_ns": 16.706705083067444,
+        "change_ns": -0.004414677082188234,
+        "change_percent": -0.026417601845662997,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 13.74088183518539,
+        "last_quarter_median_ns": 13.736467158103201,
+        "change_ns": -0.004414677082188234,
+        "change_percent": -0.032128047785728864,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "NoListeners",
+      "profile": "Disabled",
+      "block": 3,
+      "pid": 1288180,
+      "actual": {
+        "first_quarter_median_ns": 16.697568165849436,
+        "last_quarter_median_ns": 16.779134427328675,
+        "change_ns": 0.08156626147923873,
+        "change_percent": 0.4884918610247757,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 12.179712753924951,
+        "last_quarter_median_ns": 12.261279015404192,
+        "change_ns": 0.08156626147924051,
+        "change_percent": 0.6696895331374408,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "NoListeners",
+      "profile": "ExtractionOff",
+      "block": 3,
+      "pid": 1288084,
+      "actual": {
+        "first_quarter_median_ns": 16.697666612963857,
+        "last_quarter_median_ns": 16.690892227413492,
+        "change_ns": -0.006774385550365025,
+        "change_percent": -0.04057085164884677,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 13.896916339974581,
+        "last_quarter_median_ns": 13.890141954424216,
+        "change_ns": -0.006774385550365025,
+        "change_percent": -0.04874740111141529,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "NoListeners",
+      "profile": "NoAgent",
+      "block": 3,
+      "pid": 1288152,
+      "actual": {
+        "first_quarter_median_ns": 17.90195256259372,
+        "last_quarter_median_ns": 17.891462028568185,
+        "change_ns": -0.01049053402553568,
+        "change_percent": -0.05859994315623451,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 14.958125981994037,
+        "last_quarter_median_ns": 14.947635447968505,
+        "change_ns": -0.010490534025532128,
+        "change_percent": -0.07013267596596151,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "NoListeners",
+      "profile": "NoIncoming",
+      "block": 3,
+      "pid": 1288119,
+      "actual": {
+        "first_quarter_median_ns": 16.698945242369838,
+        "last_quarter_median_ns": 16.705123760547032,
+        "change_ns": 0.006178518177193837,
+        "change_percent": 0.03699945168702534,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 13.748696971409444,
+        "last_quarter_median_ns": 13.754875489586638,
+        "change_ns": 0.006178518177193837,
+        "change_percent": 0.04493893632278034,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    }
+  ]
+}

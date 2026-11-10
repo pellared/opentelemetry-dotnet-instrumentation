@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "suite": "link-sampling-existing-net10",
+  "process_analysis_sha256": "29504339b0a302fc7f71c807bae82a929ba4cbddab9bfbee85fdaf162fbfc07a",
+  "native_audit_sha256": "e69a1627b730eb8be545ee1b0e9da78a1648e82d00c65bbd6ff3067d29f1bc95",
+  "quarter_size": 5,
+  "inspection_rule": "Actual or Result absolute first-to-last quarter median change >=2%; zero initial median uses1ns. Descriptive inspection only; never an exclusion rule.",
+  "interpretation": "Result subtracts a constant per-process overhead, so relative percent changes may be larger than Raw Actual changes. A flag alone does not prove tier transition or external interference.",
+  "all_measurements_retained": true,
+  "processes": [
+    {
+      "method": "RootExistingLink",
+      "profile": "AutomaticLink",
+      "block": 0,
+      "pid": 1294963,
+      "actual": {
+        "first_quarter_median_ns": 976.6669957264958,
+        "last_quarter_median_ns": 975.9352051282051,
+        "change_ns": -0.7317905982906723,
+        "change_percent": -0.07492733976808275,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 971.7770128205128,
+        "last_quarter_median_ns": 971.0452222222223,
+        "change_ns": -0.7317905982905586,
+        "change_percent": -0.07530437421714442,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "RootExistingLink",
+      "profile": "ManualLink",
+      "block": 0,
+      "pid": 1294997,
+      "actual": {
+        "first_quarter_median_ns": 614.718172030825,
+        "last_quarter_median_ns": 615.6286151405259,
+        "change_ns": 0.9104431097008501,
+        "change_percent": 0.1481074012653627,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 609.9149308703536,
+        "last_quarter_median_ns": 610.8253739800545,
+        "change_ns": 0.9104431097008501,
+        "change_percent": 0.14927378616582665,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "RootExistingLink",
+      "profile": "AutomaticLink",
+      "block": 1,
+      "pid": 1295070,
+      "actual": {
+        "first_quarter_median_ns": 972.6254112399946,
+        "last_quarter_median_ns": 972.4135548093882,
+        "change_ns": -0.21185643060641723,
+        "change_percent": -0.021781913998764058,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 968.1409747659748,
+        "last_quarter_median_ns": 967.9291183353683,
+        "change_ns": -0.21185643060641723,
+        "change_percent": -0.021882807992668063,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "RootExistingLink",
+      "profile": "ManualLink",
+      "block": 1,
+      "pid": 1295033,
+      "actual": {
+        "first_quarter_median_ns": 626.7631839008176,
+        "last_quarter_median_ns": 630.0150143742701,
+        "change_ns": 3.2518304734525145,
+        "change_percent": 0.5188292096568237,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 623.8879031533555,
+        "last_quarter_median_ns": 627.139733626808,
+        "change_ns": 3.2518304734525145,
+        "change_percent": 0.5212203116964798,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "RootExistingLink",
+      "profile": "AutomaticLink",
+      "block": 2,
+      "pid": 1295105,
+      "actual": {
+        "first_quarter_median_ns": 968.5025174611785,
+        "last_quarter_median_ns": 969.175128839764,
+        "change_ns": 0.6726113785855432,
+        "change_percent": 0.06944859372681744,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 964.3245490608259,
+        "last_quarter_median_ns": 964.9971604394115,
+        "change_ns": 0.6726113785855432,
+        "change_percent": 0.06974948208469112,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "RootExistingLink",
+      "profile": "ManualLink",
+      "block": 2,
+      "pid": 1295145,
+      "actual": {
+        "first_quarter_median_ns": 613.5444236324246,
+        "last_quarter_median_ns": 642.7720651290847,
+        "change_ns": 29.227641496660112,
+        "change_percent": 4.7637368006086644,
+        "inspection_flag": true
+      },
+      "result": {
+        "first_quarter_median_ns": 609.1090900884636,
+        "last_quarter_median_ns": 638.3367315851236,
+        "change_ns": 29.22764149666,
+        "change_percent": 4.798424776818733,
+        "inspection_flag": true
+      },
+      "inspection_flag": true
+    },
+    {
+      "method": "RootExistingLink",
+      "profile": "AutomaticLink",
+      "block": 3,
+      "pid": 1295210,
+      "actual": {
+        "first_quarter_median_ns": 995.4119709177675,
+        "last_quarter_median_ns": 995.2752394702262,
+        "change_ns": -0.13673144754125133,
+        "change_percent": -0.013736166686362239,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 990.5530379002697,
+        "last_quarter_median_ns": 990.4163064527283,
+        "change_ns": -0.13673144754136501,
+        "change_percent": -0.01380354633319092,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "RootExistingLink",
+      "profile": "ManualLink",
+      "block": 3,
+      "pid": 1295176,
+      "actual": {
+        "first_quarter_median_ns": 640.2033036702323,
+        "last_quarter_median_ns": 644.2997049059388,
+        "change_ns": 4.09640123570648,
+        "change_percent": 0.6398594340613517,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 637.4552690427886,
+        "last_quarter_median_ns": 641.5516702784951,
+        "change_ns": 4.09640123570648,
+        "change_percent": 0.6426178329120624,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    }
+  ]
+}

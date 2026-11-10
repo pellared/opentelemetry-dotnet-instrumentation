@@ -1,0 +1,17 @@
+[2026-11-10T01:38:52.919393068Z] [1293129|1293129] [info] OpenTelemetry CLR Profiler 1.19.2 on Linux (amd64)
+[2026-11-10T01:38:52.919603004Z] [1293129|1293129] [info] IsStandaloneDeployment: Detected standalone deployment: OpenTelemetry.AutoInstrumentation.dll found at '/home/splunker/opentelemetry-dotnet-instrumentation/bin/tracer-home/net/OpenTelemetry.AutoInstrumentation.dll'.
+[2026-11-10T01:38:52.920451421Z] [1293129|1293136] [info] Initializing ReJIT request thread.
+[2026-11-10T01:38:52.920481062Z] [1293129|1293129] [info] NGEN is disabled.
+[2026-11-10T01:38:52.920864874Z] [1293129|1293129] [info] Profiler filepath: /home/splunker/opentelemetry-dotnet-instrumentation/bin/tracer-home/linux-x64/OpenTelemetry.AutoInstrumentation.Native.so
+[2026-11-10T01:38:52.920882474Z] [1293129|1293129] [info] Profiler attached.
+[2026-11-10T01:38:52.930755483Z] [1293129|1293129] [info] COR library: System.Private.CoreLib 10.0.0
+[2026-11-10T01:38:52.930863187Z] [1293129|1293129] [info] UnsafeAccessorTypeAttribute metadata redirection enabled: true
+[2026-11-10T01:38:53.907299864Z] [1293129|1293129] [info] ModuleLoadFinished: OpenTelemetry.AutoInstrumentation.Loader loaded into AppDomain 111061344061120 [clrhost]
+[2026-11-10T01:38:53.955843325Z] [1293129|1293129] [info] RedirectAssemblyReferences: redirecting [Microsoft.Extensions.Logging.Abstractions] from_version=8.0.0.0 to_version=10.0.0.0 previous_redirects=0
+[2026-11-10T01:38:53.955886536Z] [1293129|1293129] [info] RedirectAssemblyReferences: redirecting [Microsoft.Extensions.DependencyInjection.Abstractions] from_version=8.0.0.0 to_version=10.0.0.0 previous_redirects=0
+[2026-11-10T01:38:53.955910817Z] [1293129|1293129] [info] RedirectAssemblyReferences: redirecting [Microsoft.Extensions.Primitives] from_version=8.0.0.0 to_version=10.0.0.0 previous_redirects=0
+[2026-11-10T01:38:53.956350241Z] [1293129|1293129] [info] Rewriting PInvokes to native: /home/splunker/opentelemetry-dotnet-instrumentation/bin/tracer-home/linux-x64/OpenTelemetry.AutoInstrumentation.Native.so
+[2026-11-10T01:39:24.071247123Z] [1293129|1293137] [info] RedirectAssemblyReferences: redirecting [Google.Protobuf] from_version=3.31.1.0 to_version=3.36.2.0 previous_redirects=0
+[2026-11-10T01:39:24.091103885Z] [1293129|1293136] [info] Exiting ReJIT request thread.
+[2026-11-10T01:39:24.091211109Z] [1293129|1293129] [info] Exiting...
+[2026-11-10T01:39:24.091232479Z] [1293129|1293129] [info] Stats: Total time: 31171ms | Total time in Callbacks: 44ms [Initialize=1ms, ModuleLoadFinished=42ms/64, CallTargetRequestRejit=0ms/0, CallTargetRewriter=0ms/0, AssemblyLoadFinished=0ms/64, ModuleUnloadStarted=0ms/0, JitCompilationStarted=0ms/0, JitInlining=0ms/0, JitCacheFunctionSearchStarted=0ms/0, InitializeProfiler=0ms/0]

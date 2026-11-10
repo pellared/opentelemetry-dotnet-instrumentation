@@ -1,0 +1,348 @@
+{
+  "schema_version": 2,
+  "suite": "activity-repeat-net10-ambientparent",
+  "process_analysis_sha256": "ae3fd39fc68bc82401d3a93df60b50488b786ac698adb643e9a1ca4c3734e47a",
+  "native_audit_sha256": "0cb7fc14f5e5520263a58bc724730e8caba5f8f9d1256f0af93c737e4798b092",
+  "quarter_size": 5,
+  "inspection_rule": "Actual or Result absolute first-to-last quarter median change >=2%; zero initial median uses1ns. Descriptive inspection only; never an exclusion rule.",
+  "interpretation": "Result subtracts a constant per-process overhead, so relative percent changes may be larger than Raw Actual changes. A flag alone does not prove tier transition or external interference.",
+  "all_measurements_retained": true,
+  "processes": [
+    {
+      "method": "AmbientParent",
+      "profile": "AutomaticLink",
+      "block": 0,
+      "pid": 1296501,
+      "actual": {
+        "first_quarter_median_ns": 487.1414519711757,
+        "last_quarter_median_ns": 488.0873452093609,
+        "change_ns": 0.9458932381851923,
+        "change_percent": 0.19417219256494533,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 483.00069524609086,
+        "last_quarter_median_ns": 483.94658848427605,
+        "change_ns": 0.9458932381851923,
+        "change_percent": 0.19583682746113773,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "AmbientParent",
+      "profile": "AutomaticParent",
+      "block": 0,
+      "pid": 1296462,
+      "actual": {
+        "first_quarter_median_ns": 485.47143500554324,
+        "last_quarter_median_ns": 487.8255006236142,
+        "change_ns": 2.3540656180709334,
+        "change_percent": 0.48490301350976317,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 480.57099674334813,
+        "last_quarter_median_ns": 482.92506236141907,
+        "change_ns": 2.3540656180709334,
+        "change_percent": 0.48984762584998176,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "AmbientParent",
+      "profile": "ManualLink",
+      "block": 0,
+      "pid": 1296572,
+      "actual": {
+        "first_quarter_median_ns": 404.60872295600035,
+        "last_quarter_median_ns": 405.54900838667857,
+        "change_ns": 0.940285430678216,
+        "change_percent": 0.23239376151078517,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 401.5991967830808,
+        "last_quarter_median_ns": 402.539482213759,
+        "change_ns": 0.940285430678216,
+        "change_percent": 0.23413528667641792,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "AmbientParent",
+      "profile": "ManualParent",
+      "block": 0,
+      "pid": 1296543,
+      "actual": {
+        "first_quarter_median_ns": 407.96109331197437,
+        "last_quarter_median_ns": 407.65686824189027,
+        "change_ns": -0.30422507008410093,
+        "change_percent": -0.07457207931625964,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 403.0284691629956,
+        "last_quarter_median_ns": 402.7242440929115,
+        "change_ns": -0.30422507008410093,
+        "change_percent": -0.07548475935605925,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "AmbientParent",
+      "profile": "AutomaticLink",
+      "block": 1,
+      "pid": 1296608,
+      "actual": {
+        "first_quarter_median_ns": 481.6378490118442,
+        "last_quarter_median_ns": 481.9739862443254,
+        "change_ns": 0.3361372324811782,
+        "change_percent": 0.06979045213553192,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 478.79683286684644,
+        "last_quarter_median_ns": 479.13297009932757,
+        "change_ns": 0.3361372324811214,
+        "change_percent": 0.07020456473540992,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "AmbientParent",
+      "profile": "AutomaticParent",
+      "block": 1,
+      "pid": 1296705,
+      "actual": {
+        "first_quarter_median_ns": 485.8380492129389,
+        "last_quarter_median_ns": 486.24908536585366,
+        "change_ns": 0.4110361529147326,
+        "change_percent": 0.08460353271642074,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 481.44683553883414,
+        "last_quarter_median_ns": 481.8578716917488,
+        "change_ns": 0.41103615291467577,
+        "change_percent": 0.08537519048279485,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "AmbientParent",
+      "profile": "ManualLink",
+      "block": 1,
+      "pid": 1296678,
+      "actual": {
+        "first_quarter_median_ns": 404.22074543038894,
+        "last_quarter_median_ns": 404.48219965375637,
+        "change_ns": 0.26145422336742286,
+        "change_percent": 0.06468105022394699,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 399.93423886786377,
+        "last_quarter_median_ns": 400.1956930912312,
+        "change_ns": 0.26145422336742286,
+        "change_percent": 0.06537430356239327,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "AmbientParent",
+      "profile": "ManualParent",
+      "block": 1,
+      "pid": 1296637,
+      "actual": {
+        "first_quarter_median_ns": 407.4825626185209,
+        "last_quarter_median_ns": 407.8903698509271,
+        "change_ns": 0.407807232406185,
+        "change_percent": 0.10007967697698295,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 403.35703585914456,
+        "last_quarter_median_ns": 403.7648430915508,
+        "change_ns": 0.40780723240624184,
+        "change_percent": 0.10110328967922744,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "AmbientParent",
+      "profile": "AutomaticLink",
+      "block": 2,
+      "pid": 1296829,
+      "actual": {
+        "first_quarter_median_ns": 481.4395634156407,
+        "last_quarter_median_ns": 484.2073732718894,
+        "change_ns": 2.767809856248732,
+        "change_percent": 0.5749028676854229,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 478.47260170919594,
+        "last_quarter_median_ns": 481.2404115654447,
+        "change_ns": 2.767809856248732,
+        "change_percent": 0.5784677840197316,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "AmbientParent",
+      "profile": "AutomaticParent",
+      "block": 2,
+      "pid": 1296800,
+      "actual": {
+        "first_quarter_median_ns": 480.67802139766263,
+        "last_quarter_median_ns": 481.5690504787216,
+        "change_ns": 0.8910290810589458,
+        "change_percent": 0.1853692162724796,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 476.2055202051177,
+        "last_quarter_median_ns": 477.0965492861767,
+        "change_ns": 0.8910290810590027,
+        "change_percent": 0.18711019575647914,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "AmbientParent",
+      "profile": "ManualLink",
+      "block": 2,
+      "pid": 1296774,
+      "actual": {
+        "first_quarter_median_ns": 405.2014415856454,
+        "last_quarter_median_ns": 405.31739585803496,
+        "change_ns": 0.11595427238955835,
+        "change_percent": 0.028616451100416107,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 401.0197711643348,
+        "last_quarter_median_ns": 401.1357254367244,
+        "change_ns": 0.11595427238955835,
+        "change_percent": 0.02891485176725883,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "AmbientParent",
+      "profile": "ManualParent",
+      "block": 2,
+      "pid": 1296747,
+      "actual": {
+        "first_quarter_median_ns": 414.39764689333657,
+        "last_quarter_median_ns": 414.31033478016235,
+        "change_ns": -0.08731211317422094,
+        "change_percent": -0.021069645020621586,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 411.54202837392495,
+        "last_quarter_median_ns": 411.45471626075073,
+        "change_ns": -0.08731211317422094,
+        "change_percent": -0.021215843620936425,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "AmbientParent",
+      "profile": "AutomaticLink",
+      "block": 3,
+      "pid": 1296891,
+      "actual": {
+        "first_quarter_median_ns": 480.54004381902996,
+        "last_quarter_median_ns": 483.35548295259656,
+        "change_ns": 2.815439133566599,
+        "change_percent": 0.5858906390383778,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 475.64714318789873,
+        "last_quarter_median_ns": 478.46258232146533,
+        "change_ns": 2.815439133566599,
+        "change_percent": 0.5919175956144329,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "AmbientParent",
+      "profile": "AutomaticParent",
+      "block": 3,
+      "pid": 1296875,
+      "actual": {
+        "first_quarter_median_ns": 485.4604914426275,
+        "last_quarter_median_ns": 485.70247323655764,
+        "change_ns": 0.24198179393016517,
+        "change_percent": 0.049845826425776174,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 480.5625627944845,
+        "last_quarter_median_ns": 480.8045445884146,
+        "change_ns": 0.24198179393010832,
+        "change_percent": 0.050353858719875966,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "AmbientParent",
+      "profile": "ManualLink",
+      "block": 3,
+      "pid": 1296856,
+      "actual": {
+        "first_quarter_median_ns": 403.6486222060841,
+        "last_quarter_median_ns": 402.7906983781167,
+        "change_ns": -0.8579238279673973,
+        "change_percent": -0.212542241139968,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 400.6422425966271,
+        "last_quarter_median_ns": 399.7843187686597,
+        "change_ns": -0.8579238279673973,
+        "change_percent": -0.2141371370145695,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    },
+    {
+      "method": "AmbientParent",
+      "profile": "ManualParent",
+      "block": 3,
+      "pid": 1296920,
+      "actual": {
+        "first_quarter_median_ns": 406.9495681193561,
+        "last_quarter_median_ns": 406.39649587750296,
+        "change_ns": -0.5530722418531582,
+        "change_percent": -0.1359068260986418,
+        "inspection_flag": false
+      },
+      "result": {
+        "first_quarter_median_ns": 403.827954456223,
+        "last_quarter_median_ns": 403.2748822143698,
+        "change_ns": -0.5530722418531582,
+        "change_percent": -0.13695739379853133,
+        "inspection_flag": false
+      },
+      "inspection_flag": false
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "arguments": {
+    "name": "link-sampling-root-net10",
+    "runtime": "net10.0",
+    "cases": "ManualLink,AutomaticLink",
+    "methods": [
+      "Root"
+    ],
+    "tiering": null,
+    "sdk": false,
+    "launches": "3",
+    "blocks": "4",
+    "app": "/home/splunker/process-context-link-sampling-perf/bin/Release/net10.0/LinkSamplingPerf.dll",
+    "type": "LinkSamplingBenchmarks"
+  },
+  "command": [
+    "dotnet",
+    "/home/splunker/process-context-link-sampling-perf/bin/Release/net10.0/LinkSamplingPerf.dll",
+    "--filter",
+    "LinkSamplingBenchmarks.Root",
+    "--artifacts",
+    "/home/splunker/process-context-perf/results/link-sampling-root-net10/bdn"
+  ],
+  "start": 1794275312.2876875,
+  "sourceSnapshotSha256": {
+    "Program.cs": "b7c7da4b9dcb1e0e45389302ac78b2f1eb38c950c594f819abb00c4b8de57731",
+    "ProcessContextPerf.csproj.snapshot": "d0e76e9d2b21a2fa656b1978d49d7f77034db4382c7dfc3896634359c36df394",
+    "LinkSamplingBenchmarks.cs": "310037b1ba7673e6f51571e87b200f6abeff3119bf03c8330d621a9b8c68a3c2",
+    "LinkSamplingPerf.csproj.snapshot": "b5e842423cde73a42cebde42ad243f34ff667b0a08df098aa09b0797c877f2dc"
+  },
+  "environment": {
+    "PROCESS_BENCH_REPO": "/home/splunker/opentelemetry-dotnet-instrumentation",
+    "PROCESS_BENCH_RUNTIME": "net10.0",
+    "PROCESS_BENCH_CASES": "ManualLink,AutomaticLink",
+    "PROCESS_BENCH_LAUNCHES": "3",
+    "PROCESS_BENCH_SDK": "false",
+    "PROCESS_BENCH_BLOCKS": "4"
+  },
+  "end": 1794275527.5078804,
+  "exitCode": 0
+}

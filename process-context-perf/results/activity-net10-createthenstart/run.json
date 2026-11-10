@@ -1,0 +1,39 @@
+{
+  "arguments": {
+    "name": "activity-net10-createthenstart",
+    "runtime": "net10.0",
+    "cases": "ManualParent,AutomaticParent,ManualLink,AutomaticLink",
+    "methods": [
+      "CreateThenStart"
+    ],
+    "tiering": null,
+    "sdk": false,
+    "launches": "3",
+    "blocks": "4",
+    "app": "/home/splunker/process-context-perf/bin/Release/net10.0/ProcessContextPerf.dll",
+    "type": "ActivityFactoryBenchmarks"
+  },
+  "command": [
+    "dotnet",
+    "/home/splunker/process-context-perf/bin/Release/net10.0/ProcessContextPerf.dll",
+    "--filter",
+    "ActivityFactoryBenchmarks.CreateThenStart",
+    "--artifacts",
+    "/home/splunker/process-context-perf/results/activity-net10-createthenstart/bdn"
+  ],
+  "start": 1794265101.1154556,
+  "sourceSnapshotSha256": {
+    "Program.cs": "b7c7da4b9dcb1e0e45389302ac78b2f1eb38c950c594f819abb00c4b8de57731",
+    "ProcessContextPerf.csproj.snapshot": "d0e76e9d2b21a2fa656b1978d49d7f77034db4382c7dfc3896634359c36df394"
+  },
+  "environment": {
+    "PROCESS_BENCH_REPO": "/home/splunker/opentelemetry-dotnet-instrumentation",
+    "PROCESS_BENCH_RUNTIME": "net10.0",
+    "PROCESS_BENCH_CASES": "ManualParent,AutomaticParent,ManualLink,AutomaticLink",
+    "PROCESS_BENCH_LAUNCHES": "3",
+    "PROCESS_BENCH_SDK": "false",
+    "PROCESS_BENCH_BLOCKS": "4"
+  },
+  "end": 1794265527.2373195,
+  "exitCode": 0
+}

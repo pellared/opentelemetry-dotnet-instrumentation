@@ -1,0 +1,4076 @@
+{
+  "schema_version": 1,
+  "monitor": {
+    "source_path": "host-monitor.jsonl.gz",
+    "metadata_records": [
+      {
+        "kind": "metadata",
+        "pid": 1253033,
+        "monitor_affinity": [
+          1
+        ],
+        "cgroup": "/sys/fs/cgroup/user.slice/user-1002.slice/session-7369.scope",
+        "interval_seconds": 10.0,
+        "clock_ticks_per_second": 100,
+        "started_utc": "2026-11-09T21:05:35.157733+00:00"
+      },
+      {
+        "kind": "metadata",
+        "pid": 1263121,
+        "monitor_affinity": [
+          1
+        ],
+        "cgroup": "/sys/fs/cgroup/user.slice/user-1002.slice/session-7369.scope",
+        "interval_seconds": 10.0,
+        "clock_ticks_per_second": 100,
+        "started_utc": "2026-11-09T21:40:34.513439+00:00"
+      }
+    ],
+    "all_monitor_sessions_affined_to_cpu1": true,
+    "line_count": 1926,
+    "sample_count": 1923,
+    "interval_count": 1921,
+    "first_sample_utc": "2026-11-09T21:05:35.158073Z",
+    "last_sample_utc": "2026-11-10T02:25:56.366986Z",
+    "metric_issue_count_all_intervals": 0
+  },
+  "semantics": {
+    "intervals": "Each interval is [previous sample UTC, current sample UTC]; rates are derived from adjacent raw counters. Shared boundaries have zero measure.",
+    "weighting": "Rates use overlap seconds as weights. CPU rates use counter-tick ratios; PSI and cgroup rates use monotonic elapsed seconds. PSI avg10/avg60/avg300 and recorded deltas are not used.",
+    "boundaries": "Attribution within a partially overlapping interval assumes its measured rate and counter increments were uniform. Cgroup estimated totals prorate increments by wall-time overlap and may be fractional. Maxima are whole-interval rates for any interval with positive overlap, not instantaneous peaks.",
+    "scope": "run.json start/end windows include checkpoint build, setup, warmup, measurement, and other launcher activity; they are not restricted to WorkloadActual iterations. Aggregate statistics cover the union of accepted windows, without double-counting overlap.",
+    "coverage": "Time coverage and coverage of all eight required metrics are separate. Missing or decreasing counters are unavailable, never zero. Gaps between monitor sessions are uncovered; long within-session sampling intervals remain attributed and are counted explicitly.",
+    "isolation": "The monitor's declared affinity is reported as metadata. CPU affinity and these observations do not establish exclusive CPU ownership, an offline SMT sibling, or host isolation. The KVM host is unreserved."
+  },
+  "window_count": 41,
+  "windows": [
+    {
+      "name": "no-listener-net10",
+      "start": "2026-11-09T21:11:39.954199Z",
+      "end": "2026-11-09T21:18:06.693362Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-09T21:11:35.197277Z",
+        "sample_at_or_after": "2026-11-09T21:11:45.198418Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-09T21:18:05.239037Z",
+        "sample_at_or_after": "2026-11-09T21:18:15.240058Z"
+      },
+      "duration_seconds": 386.739163,
+      "covered_seconds": 386.7391630000001,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 40,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001264,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 386.7391630000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 386.7391630000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 1.1378132490693826,
+          "max_percent": 32.86290322580645
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 386.7391630000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 12.913862614103152,
+          "max_percent": 19.43914336486477
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 386.7391630000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 386.7391630000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 13.328866780323033,
+          "max_percent": 19.811772791032833
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 386.7391630000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 0.018568318475320783,
+          "max_percent": 0.171770491938677
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 386.7391630000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 386.7391630000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-net10-root",
+      "start": "2026-11-09T21:41:04.059578Z",
+      "end": "2026-11-09T21:47:39.289237Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-09T21:40:54.516039Z",
+        "sample_at_or_after": "2026-11-09T21:41:04.517122Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-09T21:47:34.560017Z",
+        "sample_at_or_after": "2026-11-09T21:47:44.561094Z"
+      },
+      "duration_seconds": 395.229659,
+      "covered_seconds": 395.2296590000001,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 41,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001276,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 395.2296590000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 41,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 395.2296590000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 41,
+          "weighted_mean_percent": 0.4687650669625229,
+          "max_percent": 8.249496981891348
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 395.2296590000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 41,
+          "weighted_mean_percent": 13.920227849624172,
+          "max_percent": 18.540519820541217
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 395.2296590000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 41,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 395.2296590000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 41,
+          "weighted_mean_percent": 14.302800619392247,
+          "max_percent": 18.72531988402948
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 395.2296590000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 41,
+          "weighted_mean_percent": 0.02202045733261808,
+          "max_percent": 0.1127976265707932
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 395.2296590000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 41,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 395.2296590000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 41,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-net10-rootemptylinks",
+      "start": "2026-11-09T21:47:39.482850Z",
+      "end": "2026-11-09T21:54:43.596385Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-09T21:47:34.560017Z",
+        "sample_at_or_after": "2026-11-09T21:47:44.561094Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-09T21:54:34.606127Z",
+        "sample_at_or_after": "2026-11-09T21:54:44.607290Z"
+      },
+      "duration_seconds": 424.113535,
+      "covered_seconds": 424.113535,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 43,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001204,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 424.113535,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 424.113535,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "weighted_mean_percent": 0.5964379399088217,
+          "max_percent": 7.530120481927711
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 424.113535,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "weighted_mean_percent": 13.841711979044964,
+          "max_percent": 18.647069872474457
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 424.113535,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 424.113535,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "weighted_mean_percent": 14.22528993067871,
+          "max_percent": 18.838598506973753
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 424.113535,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "weighted_mean_percent": 0.019809675728743318,
+          "max_percent": 0.14340413606292737
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 424.113535,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 424.113535,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-net10-rootexistinglink",
+      "start": "2026-11-09T21:54:43.787646Z",
+      "end": "2026-11-09T22:01:44.222259Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-09T21:54:34.606127Z",
+        "sample_at_or_after": "2026-11-09T21:54:44.607290Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-09T22:01:34.652456Z",
+        "sample_at_or_after": "2026-11-09T22:01:44.653574Z"
+      },
+      "duration_seconds": 420.434613,
+      "covered_seconds": 420.43461299999996,
+      "uncovered_seconds": 5.684341886080802e-14,
+      "coverage_fraction": 0.9999999999999999,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 43,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001167,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 420.43461299999996,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 420.43461299999996,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "weighted_mean_percent": 0.6757716394121915,
+          "max_percent": 3.20962888665998
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 420.43461299999996,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "weighted_mean_percent": 13.297765429187885,
+          "max_percent": 17.701009428698498
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 420.43461299999996,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 420.43461299999996,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "weighted_mean_percent": 13.856077780670214,
+          "max_percent": 17.896907841578074
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 420.43461299999996,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "weighted_mean_percent": 0.021433616890655833,
+          "max_percent": 0.11605690352587733
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 420.43461299999996,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 420.43461299999996,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-net10-rootalreadylinked",
+      "start": "2026-11-09T22:01:44.414151Z",
+      "end": "2026-11-09T22:08:50.452579Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-09T22:01:34.652456Z",
+        "sample_at_or_after": "2026-11-09T22:01:44.653574Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-09T22:08:44.700357Z",
+        "sample_at_or_after": "2026-11-09T22:08:54.701439Z"
+      },
+      "duration_seconds": 426.038428,
+      "covered_seconds": 426.03842800000024,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 44,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001781,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 426.03842800000024,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 0.002345120821851281,
+          "max_percent": 0.0999000999000999
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 426.03842800000024,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 0.23647687676308732,
+          "max_percent": 2.50501002004008
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 426.03842800000024,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 13.701659843274477,
+          "max_percent": 18.01887200888377
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 426.03842800000024,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 426.03842800000024,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 14.127994577306383,
+          "max_percent": 18.14324890782788
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 426.03842800000024,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 0.02018296198725449,
+          "max_percent": 0.13782966609606906
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 426.03842800000024,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 426.03842800000024,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-net10-dropped",
+      "start": "2026-11-09T22:08:50.643523Z",
+      "end": "2026-11-09T22:15:43.557615Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-09T22:08:44.700357Z",
+        "sample_at_or_after": "2026-11-09T22:08:54.701439Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-09T22:15:34.744058Z",
+        "sample_at_or_after": "2026-11-09T22:15:44.745128Z"
+      },
+      "duration_seconds": 412.914092,
+      "covered_seconds": 412.914092,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 42,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001142,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 412.914092,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 412.914092,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 0.43179610395836665,
+          "max_percent": 6.042296072507553
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 412.914092,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 13.218945467103248,
+          "max_percent": 19.979384772262147
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 412.914092,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 412.914092,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 13.751818157991629,
+          "max_percent": 20.200402258009447
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 412.914092,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 0.018531379176975366,
+          "max_percent": 0.15930178701226094
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 412.914092,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 412.914092,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-net10-dropreadinglinks",
+      "start": "2026-11-09T22:15:43.749373Z",
+      "end": "2026-11-09T22:22:30.296218Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-09T22:15:34.744058Z",
+        "sample_at_or_after": "2026-11-09T22:15:44.745128Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-09T22:22:24.789229Z",
+        "sample_at_or_after": "2026-11-09T22:22:34.790279Z"
+      },
+      "duration_seconds": 406.546845,
+      "covered_seconds": 406.5468450000001,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 42,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001253,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 406.5468450000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 406.5468450000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 0.5573446169533268,
+          "max_percent": 3.103103103103103
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 406.5468450000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 13.078416154889734,
+          "max_percent": 21.103598786411986
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 406.5468450000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 406.5468450000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 13.61001595080614,
+          "max_percent": 22.25487888232142
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 406.5468450000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 0.02112372692400728,
+          "max_percent": 0.11173743817082242
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 406.5468450000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 406.5468450000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-net10-ambientparent",
+      "start": "2026-11-09T22:22:30.487949Z",
+      "end": "2026-11-09T22:29:38.941807Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-09T22:22:24.789229Z",
+        "sample_at_or_after": "2026-11-09T22:22:34.790279Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-09T22:29:34.835850Z",
+        "sample_at_or_after": "2026-11-09T22:29:44.836953Z"
+      },
+      "duration_seconds": 428.453858,
+      "covered_seconds": 428.4538580000001,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 44,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.00119,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 428.4538580000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 0.0023295630575022566,
+          "max_percent": 0.0998003992015968
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 428.4538580000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 0.39485466260849017,
+          "max_percent": 7.429718875502008
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 428.4538580000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 14.075999828464143,
+          "max_percent": 18.0800690313051
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 428.4538580000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 428.4538580000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 14.328954548968198,
+          "max_percent": 18.23137262088089
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 428.4538580000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 0.02009353242555273,
+          "max_percent": 0.14608424939261597
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 428.4538580000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 428.4538580000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-net10-suppliedcontext",
+      "start": "2026-11-09T22:29:39.132677Z",
+      "end": "2026-11-09T22:37:39.882257Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-09T22:29:34.835850Z",
+        "sample_at_or_after": "2026-11-09T22:29:44.836953Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-09T22:37:34.887366Z",
+        "sample_at_or_after": "2026-11-09T22:37:44.888431Z"
+      },
+      "duration_seconds": 480.74958,
+      "covered_seconds": 480.74958,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 49,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001157,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 480.74958,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 480.74958,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "weighted_mean_percent": 0.38887939841576835,
+          "max_percent": 9.036144578313253
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 480.74958,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "weighted_mean_percent": 13.574391938542334,
+          "max_percent": 17.85228979196206
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 480.74958,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 480.74958,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "weighted_mean_percent": 13.886869963574252,
+          "max_percent": 17.995785206557294
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 480.74958,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "weighted_mean_percent": 0.019194137593024217,
+          "max_percent": 0.13524598908901128
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 480.74958,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 480.74958,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-net10-suppliedparentid",
+      "start": "2026-11-09T22:37:40.073815Z",
+      "end": "2026-11-09T22:44:28.425734Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-09T22:37:34.887366Z",
+        "sample_at_or_after": "2026-11-09T22:37:44.888431Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-09T22:44:24.932062Z",
+        "sample_at_or_after": "2026-11-09T22:44:34.933172Z"
+      },
+      "duration_seconds": 408.351919,
+      "covered_seconds": 408.35191899999995,
+      "uncovered_seconds": 5.684341886080802e-14,
+      "coverage_fraction": 0.9999999999999999,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 42,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.00123,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 408.35191899999995,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 408.35191899999995,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 0.3838740034727697,
+          "max_percent": 6.834170854271357
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 408.35191899999995,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 14.328995609741733,
+          "max_percent": 18.502728645990004
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 408.35191899999995,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 408.35191899999995,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 14.622340195526004,
+          "max_percent": 18.749891510788157
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 408.35191899999995,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 0.02003719897878244,
+          "max_percent": 0.14965321984031799
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 408.35191899999995,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 408.35191899999995,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-net10-suppliedemptyparentid",
+      "start": "2026-11-09T22:44:28.617076Z",
+      "end": "2026-11-09T22:51:44.814488Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-09T22:44:24.932062Z",
+        "sample_at_or_after": "2026-11-09T22:44:34.933172Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-09T22:51:34.978823Z",
+        "sample_at_or_after": "2026-11-09T22:51:44.979910Z"
+      },
+      "duration_seconds": 436.197412,
+      "covered_seconds": 436.19741200000004,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 44,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001177,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 436.19741200000004,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 436.19741200000004,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 0.546518176976026,
+          "max_percent": 15.330661322645291
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 436.19741200000004,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 14.291873470864704,
+          "max_percent": 18.76719336429873
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 436.19741200000004,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 436.19741200000004,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 14.519776392218482,
+          "max_percent": 19.16705577792419
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 436.19741200000004,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 0.020080940597788956,
+          "max_percent": 0.13223550649635393
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 436.19741200000004,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 436.19741200000004,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-net10-createonly",
+      "start": "2026-11-09T22:51:45.006986Z",
+      "end": "2026-11-09T22:58:20.923800Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-09T22:51:44.979910Z",
+        "sample_at_or_after": "2026-11-09T22:51:54.981032Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-09T22:58:15.022442Z",
+        "sample_at_or_after": "2026-11-09T22:58:25.023528Z"
+      },
+      "duration_seconds": 395.916814,
+      "covered_seconds": 395.91681399999993,
+      "uncovered_seconds": 5.684341886080802e-14,
+      "coverage_fraction": 0.9999999999999999,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 40,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001207,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 395.91681399999993,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 0.0025192276880668172,
+          "max_percent": 0.1
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 395.91681399999993,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 0.30166316943631694,
+          "max_percent": 4.104104104104104
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 395.91681399999993,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 13.774884647800237,
+          "max_percent": 20.340719631737326
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 395.91681399999993,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 395.91681399999993,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 13.987493704223604,
+          "max_percent": 21.09067518662268
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 395.91681399999993,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 0.02050051699832891,
+          "max_percent": 0.11291731608402178
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 395.91681399999993,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 395.91681399999993,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-net10-createthenstart",
+      "start": "2026-11-09T22:58:21.115456Z",
+      "end": "2026-11-09T23:05:27.237319Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-09T22:58:15.022442Z",
+        "sample_at_or_after": "2026-11-09T22:58:25.023528Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-09T23:05:25.069920Z",
+        "sample_at_or_after": "2026-11-09T23:05:35.071000Z"
+      },
+      "duration_seconds": 426.121863,
+      "covered_seconds": 426.12186299999985,
+      "uncovered_seconds": 1.7053025658242404e-13,
+      "coverage_fraction": 0.9999999999999996,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 44,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001262,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 426.12186299999985,
+          "coverage_fraction": 0.9999999999999996,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 426.12186299999985,
+          "coverage_fraction": 0.9999999999999996,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 0.9036898240943902,
+          "max_percent": 14.457831325301205
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 426.12186299999985,
+          "coverage_fraction": 0.9999999999999996,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 13.391538791850992,
+          "max_percent": 18.46619585877194
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 426.12186299999985,
+          "coverage_fraction": 0.9999999999999996,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 426.12186299999985,
+          "coverage_fraction": 0.9999999999999996,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 13.9073764844724,
+          "max_percent": 18.92102723471434
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 426.12186299999985,
+          "coverage_fraction": 0.9999999999999996,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 0.021322478997117467,
+          "max_percent": 0.1817370996816578
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 426.12186299999985,
+          "coverage_fraction": 0.9999999999999996,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 426.12186299999985,
+          "coverage_fraction": 0.9999999999999996,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-net10-propagationonly",
+      "start": "2026-11-09T23:05:27.428524Z",
+      "end": "2026-11-09T23:11:59.663621Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-09T23:05:25.069920Z",
+        "sample_at_or_after": "2026-11-09T23:05:35.071000Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-09T23:11:55.112039Z",
+        "sample_at_or_after": "2026-11-09T23:12:05.113070Z"
+      },
+      "duration_seconds": 392.235097,
+      "covered_seconds": 392.23509699999994,
+      "uncovered_seconds": 5.684341886080802e-14,
+      "coverage_fraction": 0.9999999999999999,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 40,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001139,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 392.23509699999994,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 392.23509699999994,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 0.5426268376240728,
+          "max_percent": 11.646586345381525
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 392.23509699999994,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 14.23045576105433,
+          "max_percent": 19.171673692968017
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 392.23509699999994,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 392.23509699999994,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 14.542582675021594,
+          "max_percent": 19.26807330309828
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 392.23509699999994,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 0.02042263611329983,
+          "max_percent": 0.11953732925833357
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 392.23509699999994,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 392.23509699999994,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-net8-root",
+      "start": "2026-11-09T23:11:59.856836Z",
+      "end": "2026-11-09T23:19:38.848359Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-09T23:11:55.112039Z",
+        "sample_at_or_after": "2026-11-09T23:12:05.113070Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-09T23:19:35.161629Z",
+        "sample_at_or_after": "2026-11-09T23:19:45.162761Z"
+      },
+      "duration_seconds": 458.991523,
+      "covered_seconds": 458.9915230000001,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 47,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001175,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 458.9915230000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 47,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 458.9915230000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 47,
+          "weighted_mean_percent": 0.6891273278101029,
+          "max_percent": 22.44488977955912
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 458.9915230000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 47,
+          "weighted_mean_percent": 13.220412922483783,
+          "max_percent": 16.208638434036597
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 458.9915230000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 47,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 458.9915230000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 47,
+          "weighted_mean_percent": 13.47576692915562,
+          "max_percent": 16.39701772840235
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 458.9915230000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 47,
+          "weighted_mean_percent": 0.018973449595592006,
+          "max_percent": 0.11952693115143904
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 458.9915230000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 47,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 458.9915230000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 47,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-net8-nolisteners",
+      "start": "2026-11-09T23:19:39.039587Z",
+      "end": "2026-11-09T23:26:55.587923Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-09T23:19:35.161629Z",
+        "sample_at_or_after": "2026-11-09T23:19:45.162761Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-09T23:26:55.209016Z",
+        "sample_at_or_after": "2026-11-09T23:27:05.210090Z"
+      },
+      "duration_seconds": 436.548336,
+      "covered_seconds": 436.548336,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 45,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001989,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 436.548336,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 45,
+          "weighted_mean_percent": 0.0022909325669723778,
+          "max_percent": 0.1
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 436.548336,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 45,
+          "weighted_mean_percent": 0.3058090239047261,
+          "max_percent": 11.345381526104418
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 436.548336,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 45,
+          "weighted_mean_percent": 12.41985027075636,
+          "max_percent": 15.66564885014265
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 436.548336,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 45,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 436.548336,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 45,
+          "weighted_mean_percent": 12.633589801178964,
+          "max_percent": 15.526907569278638
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 436.548336,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 45,
+          "weighted_mean_percent": 0.015862881265350463,
+          "max_percent": 0.11059812708348754
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 436.548336,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 45,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 436.548336,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 45,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-net8-dropped",
+      "start": "2026-11-09T23:26:55.778697Z",
+      "end": "2026-11-09T23:34:32.135086Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-09T23:26:55.209016Z",
+        "sample_at_or_after": "2026-11-09T23:27:05.210090Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-09T23:34:25.256388Z",
+        "sample_at_or_after": "2026-11-09T23:34:35.257458Z"
+      },
+      "duration_seconds": 456.356389,
+      "covered_seconds": 456.356389,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 46,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001173,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 456.356389,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 46,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 456.356389,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 46,
+          "weighted_mean_percent": 0.3736424780399379,
+          "max_percent": 11.345381526104418
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 456.356389,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 46,
+          "weighted_mean_percent": 12.559137760684017,
+          "max_percent": 15.26704220150258
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 456.356389,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 46,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 456.356389,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 46,
+          "weighted_mean_percent": 12.732479677310243,
+          "max_percent": 15.456337327309104
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 456.356389,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 46,
+          "weighted_mean_percent": 0.016126669393117705,
+          "max_percent": 0.11059812708348754
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 456.356389,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 46,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 456.356389,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 46,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-net8-ambientparent",
+      "start": "2026-11-09T23:34:32.327899Z",
+      "end": "2026-11-09T23:42:15.369785Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-09T23:34:25.256388Z",
+        "sample_at_or_after": "2026-11-09T23:34:35.257458Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-09T23:42:15.307034Z",
+        "sample_at_or_after": "2026-11-09T23:42:25.308061Z"
+      },
+      "duration_seconds": 463.041886,
+      "covered_seconds": 463.041886,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 48,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001233,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 463.041886,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 463.041886,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 0.39424838300610215,
+          "max_percent": 15.191146881287727
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 463.041886,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 12.990877772032942,
+          "max_percent": 16.274082337017727
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 463.041886,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 463.041886,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 13.290269526333134,
+          "max_percent": 16.47766022473584
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 463.041886,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 0.017852985026611104,
+          "max_percent": 0.14856353855032564
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 463.041886,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 463.041886,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-net8-suppliedcontext",
+      "start": "2026-11-09T23:42:15.561750Z",
+      "end": "2026-11-09T23:50:15.451801Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-09T23:42:15.307034Z",
+        "sample_at_or_after": "2026-11-09T23:42:25.308061Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-09T23:50:15.358379Z",
+        "sample_at_or_after": "2026-11-09T23:50:25.359464Z"
+      },
+      "duration_seconds": 479.890051,
+      "covered_seconds": 479.89005099999986,
+      "uncovered_seconds": 1.7053025658242404e-13,
+      "coverage_fraction": 0.9999999999999997,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 49,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001231,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 479.89005099999986,
+          "coverage_fraction": 0.9999999999999997,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 479.89005099999986,
+          "coverage_fraction": 0.9999999999999997,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "weighted_mean_percent": 0.23376310817322227,
+          "max_percent": 7.3146292585170345
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 479.89005099999986,
+          "coverage_fraction": 0.9999999999999997,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "weighted_mean_percent": 12.407393697302938,
+          "max_percent": 15.533501029946216
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 479.89005099999986,
+          "coverage_fraction": 0.9999999999999997,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 479.89005099999986,
+          "coverage_fraction": 0.9999999999999997,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "weighted_mean_percent": 12.677343110787524,
+          "max_percent": 15.744369731033842
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 479.89005099999986,
+          "coverage_fraction": 0.9999999999999997,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "weighted_mean_percent": 0.017785119111031013,
+          "max_percent": 0.08715105116047007
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 479.89005099999986,
+          "coverage_fraction": 0.9999999999999997,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 479.89005099999986,
+          "coverage_fraction": 0.9999999999999997,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-net8-createonly",
+      "start": "2026-11-09T23:50:15.644647Z",
+      "end": "2026-11-09T23:58:09.153338Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-09T23:50:15.358379Z",
+        "sample_at_or_after": "2026-11-09T23:50:25.359464Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-09T23:58:05.408491Z",
+        "sample_at_or_after": "2026-11-09T23:58:15.409668Z"
+      },
+      "duration_seconds": 473.508691,
+      "covered_seconds": 473.50869100000006,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 48,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001177,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 473.50869100000006,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 0.002107889909071946,
+          "max_percent": 0.0998003992015968
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 473.50869100000006,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 0.2859087494635227,
+          "max_percent": 7.3146292585170345
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 473.50869100000006,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 12.402717805734941,
+          "max_percent": 15.531707287443917
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 473.50869100000006,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 473.50869100000006,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 12.60890567573408,
+          "max_percent": 16.015310176978204
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 473.50869100000006,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 0.018109716966611736,
+          "max_percent": 0.09133988279004028
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 473.50869100000006,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 473.50869100000006,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-net9-root",
+      "start": "2026-11-09T23:58:09.346957Z",
+      "end": "2026-11-10T00:05:56.473383Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-09T23:58:05.408491Z",
+        "sample_at_or_after": "2026-11-09T23:58:15.409668Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-10T00:05:55.460069Z",
+        "sample_at_or_after": "2026-11-10T00:06:05.461437Z"
+      },
+      "duration_seconds": 467.126426,
+      "covered_seconds": 467.1264259999999,
+      "uncovered_seconds": 5.684341886080802e-14,
+      "coverage_fraction": 0.9999999999999999,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 48,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.002007,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 467.1264259999999,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 467.1264259999999,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 0.3678898660762025,
+          "max_percent": 4.81444332998997
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 467.1264259999999,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 13.155297114733354,
+          "max_percent": 16.183707546663996
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 467.1264259999999,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 467.1264259999999,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 13.458483764895993,
+          "max_percent": 16.488734705265415
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 467.1264259999999,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 0.018616248178628614,
+          "max_percent": 0.13728229178558676
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 467.1264259999999,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 467.1264259999999,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-net9-nolisteners",
+      "start": "2026-11-10T00:05:56.665362Z",
+      "end": "2026-11-10T00:13:13.727043Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-10T00:05:55.460069Z",
+        "sample_at_or_after": "2026-11-10T00:06:05.461437Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-10T00:13:05.505451Z",
+        "sample_at_or_after": "2026-11-10T00:13:15.506530Z"
+      },
+      "duration_seconds": 437.061681,
+      "covered_seconds": 437.061681,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 44,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001368,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 437.061681,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 437.061681,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 0.2938930050975577,
+          "max_percent": 4.595404595404595
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 437.061681,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 12.762713539640476,
+          "max_percent": 16.27441304250415
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 437.061681,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 437.061681,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 12.964634331717335,
+          "max_percent": 16.505319107464768
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 437.061681,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 0.017478841196402865,
+          "max_percent": 0.1123979098391989
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 437.061681,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 437.061681,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-net9-dropped",
+      "start": "2026-11-10T00:13:13.919225Z",
+      "end": "2026-11-10T00:20:52.449821Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-10T00:13:05.505451Z",
+        "sample_at_or_after": "2026-11-10T00:13:15.506530Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-10T00:20:45.553056Z",
+        "sample_at_or_after": "2026-11-10T00:20:55.554065Z"
+      },
+      "duration_seconds": 458.530596,
+      "covered_seconds": 458.530596,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 47,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001148,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 458.530596,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 47,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 458.530596,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 47,
+          "weighted_mean_percent": 0.4576191896794457,
+          "max_percent": 5.917753259779338
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 458.530596,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 47,
+          "weighted_mean_percent": 12.575534112741321,
+          "max_percent": 15.86505222248596
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 458.530596,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 47,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 458.530596,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 47,
+          "weighted_mean_percent": 12.890495822619863,
+          "max_percent": 16.056463427964037
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 458.530596,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 47,
+          "weighted_mean_percent": 0.017404334734199268,
+          "max_percent": 0.11695702189254953
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 458.530596,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 47,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 458.530596,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 47,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-net9-ambientparent",
+      "start": "2026-11-10T00:20:52.641775Z",
+      "end": "2026-11-10T00:28:35.823605Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-10T00:20:45.553056Z",
+        "sample_at_or_after": "2026-11-10T00:20:55.554065Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-10T00:28:35.603939Z",
+        "sample_at_or_after": "2026-11-10T00:28:45.605021Z"
+      },
+      "duration_seconds": 463.18183,
+      "covered_seconds": 463.18183,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 48,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001191,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 463.18183,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 0.002159225460117898,
+          "max_percent": 0.1
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 463.18183,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 0.63091821215078,
+          "max_percent": 17.352056168505516
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 463.18183,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 13.374670048479137,
+          "max_percent": 16.680197943211034
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 463.18183,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 463.18183,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 13.59585153733622,
+          "max_percent": 16.749050587223888
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 463.18183,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 0.018739045447694672,
+          "max_percent": 0.14950306821523118
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 463.18183,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 463.18183,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-net9-suppliedcontext",
+      "start": "2026-11-10T00:28:36.015439Z",
+      "end": "2026-11-10T00:36:39.025859Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-10T00:28:35.603939Z",
+        "sample_at_or_after": "2026-11-10T00:28:45.605021Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-10T00:36:35.655882Z",
+        "sample_at_or_after": "2026-11-10T00:36:45.656948Z"
+      },
+      "duration_seconds": 483.01042,
+      "covered_seconds": 483.01042,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 49,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001213,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 483.01042,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 483.01042,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "weighted_mean_percent": 0.28285446613648013,
+          "max_percent": 5.817452357071214
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 483.01042,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "weighted_mean_percent": 12.667855697345768,
+          "max_percent": 16.084396767668906
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 483.01042,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 483.01042,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "weighted_mean_percent": 12.918020411950204,
+          "max_percent": 16.20668351419019
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 483.01042,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "weighted_mean_percent": 0.01981023782172346,
+          "max_percent": 0.12267644117663874
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 483.01042,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 483.01042,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-net9-createonly",
+      "start": "2026-11-10T00:36:39.217011Z",
+      "end": "2026-11-10T00:44:35.479397Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-10T00:36:35.655882Z",
+        "sample_at_or_after": "2026-11-10T00:36:45.656948Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-10T00:44:25.707008Z",
+        "sample_at_or_after": "2026-11-10T00:44:35.708001Z"
+      },
+      "duration_seconds": 476.262386,
+      "covered_seconds": 476.26238599999994,
+      "uncovered_seconds": 5.684341886080802e-14,
+      "coverage_fraction": 0.9999999999999999,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 48,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.00128,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 476.26238599999994,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 476.26238599999994,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 0.29496348605344364,
+          "max_percent": 8.366935483870968
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 476.26238599999994,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 12.534222498356536,
+          "max_percent": 16.262630019994525
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 476.26238599999994,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 476.26238599999994,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 12.801982039866528,
+          "max_percent": 16.528458102818288
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 476.26238599999994,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "weighted_mean_percent": 0.018554578432812958,
+          "max_percent": 0.13721519831932041
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 476.26238599999994,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 476.26238599999994,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 48,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "controls-net10-root",
+      "start": "2026-11-10T00:44:35.671788Z",
+      "end": "2026-11-10T00:50:52.457250Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-10T00:44:25.707008Z",
+        "sample_at_or_after": "2026-11-10T00:44:35.708001Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-10T00:50:45.749272Z",
+        "sample_at_or_after": "2026-11-10T00:50:55.750373Z"
+      },
+      "duration_seconds": 376.785462,
+      "covered_seconds": 376.78546200000005,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 39,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.002088,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 376.78546200000005,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 39,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 376.78546200000005,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 39,
+          "weighted_mean_percent": 0.7458837925588385,
+          "max_percent": 12.337011033099298
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 376.78546200000005,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 39,
+          "weighted_mean_percent": 10.861522502223202,
+          "max_percent": 18.907874023293953
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 376.78546200000005,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 39,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 376.78546200000005,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 39,
+          "weighted_mean_percent": 11.135577897529458,
+          "max_percent": 19.056438418925705
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 376.78546200000005,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 39,
+          "weighted_mean_percent": 0.0205548513368925,
+          "max_percent": 0.09579994728338745
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 376.78546200000005,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 39,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 376.78546200000005,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 39,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "controls-net10-nolisteners",
+      "start": "2026-11-10T00:50:52.648602Z",
+      "end": "2026-11-10T00:56:30.435775Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-10T00:50:45.749272Z",
+        "sample_at_or_after": "2026-11-10T00:50:55.750373Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-10T00:56:25.785375Z",
+        "sample_at_or_after": "2026-11-10T00:56:35.786428Z"
+      },
+      "duration_seconds": 337.787173,
+      "covered_seconds": 337.7871729999999,
+      "uncovered_seconds": 1.1368683772161603e-13,
+      "coverage_fraction": 0.9999999999999997,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 35,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001164,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 337.7871729999999,
+          "coverage_fraction": 0.9999999999999997,
+          "complete_coverage": true,
+          "overlapping_intervals": 35,
+          "weighted_mean_percent": 0.0029577840082799676,
+          "max_percent": 0.0999000999000999
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 337.7871729999999,
+          "coverage_fraction": 0.9999999999999997,
+          "complete_coverage": true,
+          "overlapping_intervals": 35,
+          "weighted_mean_percent": 0.8146156128236268,
+          "max_percent": 20.48435923309788
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 337.7871729999999,
+          "coverage_fraction": 0.9999999999999997,
+          "complete_coverage": true,
+          "overlapping_intervals": 35,
+          "weighted_mean_percent": 10.79544284320158,
+          "max_percent": 18.3516801783039
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 337.7871729999999,
+          "coverage_fraction": 0.9999999999999997,
+          "complete_coverage": true,
+          "overlapping_intervals": 35,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 337.7871729999999,
+          "coverage_fraction": 0.9999999999999997,
+          "complete_coverage": true,
+          "overlapping_intervals": 35,
+          "weighted_mean_percent": 10.976360912989781,
+          "max_percent": 18.469007904315266
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 337.7871729999999,
+          "coverage_fraction": 0.9999999999999997,
+          "complete_coverage": true,
+          "overlapping_intervals": 35,
+          "weighted_mean_percent": 0.01902705297878726,
+          "max_percent": 0.17449005490764227
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 337.7871729999999,
+          "coverage_fraction": 0.9999999999999997,
+          "complete_coverage": true,
+          "overlapping_intervals": 35,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 337.7871729999999,
+          "coverage_fraction": 0.9999999999999997,
+          "complete_coverage": true,
+          "overlapping_intervals": 35,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "tiering-off-net10-root",
+      "start": "2026-11-10T00:56:30.628545Z",
+      "end": "2026-11-10T01:04:51.503655Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-10T00:56:25.785375Z",
+        "sample_at_or_after": "2026-11-10T00:56:35.786428Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-10T01:04:45.839415Z",
+        "sample_at_or_after": "2026-11-10T01:04:55.840521Z"
+      },
+      "duration_seconds": 500.87511,
+      "covered_seconds": 500.87510999999984,
+      "uncovered_seconds": 1.7053025658242404e-13,
+      "coverage_fraction": 0.9999999999999997,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 51,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001242,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 500.87510999999984,
+          "coverage_fraction": 0.9999999999999997,
+          "complete_coverage": true,
+          "overlapping_intervals": 51,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 500.87510999999984,
+          "coverage_fraction": 0.9999999999999997,
+          "complete_coverage": true,
+          "overlapping_intervals": 51,
+          "weighted_mean_percent": 0.542902267111637,
+          "max_percent": 14.944834503510531
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 500.87510999999984,
+          "coverage_fraction": 0.9999999999999997,
+          "complete_coverage": true,
+          "overlapping_intervals": 51,
+          "weighted_mean_percent": 10.59070965746287,
+          "max_percent": 14.438410218388869
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 500.87510999999984,
+          "coverage_fraction": 0.9999999999999997,
+          "complete_coverage": true,
+          "overlapping_intervals": 51,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 500.87510999999984,
+          "coverage_fraction": 0.9999999999999997,
+          "complete_coverage": true,
+          "overlapping_intervals": 51,
+          "weighted_mean_percent": 10.840296448918231,
+          "max_percent": 14.53922946653863
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 500.87510999999984,
+          "coverage_fraction": 0.9999999999999997,
+          "complete_coverage": true,
+          "overlapping_intervals": 51,
+          "weighted_mean_percent": 0.01779279404396104,
+          "max_percent": 0.13669482679051734
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 500.87510999999984,
+          "coverage_fraction": 0.9999999999999997,
+          "complete_coverage": true,
+          "overlapping_intervals": 51,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 500.87510999999984,
+          "coverage_fraction": 0.9999999999999997,
+          "complete_coverage": true,
+          "overlapping_intervals": 51,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "tiering-off-net10-nolisteners",
+      "start": "2026-11-10T01:04:51.695457Z",
+      "end": "2026-11-10T01:13:14.773700Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-10T01:04:45.839415Z",
+        "sample_at_or_after": "2026-11-10T01:04:55.840521Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-10T01:13:05.891858Z",
+        "sample_at_or_after": "2026-11-10T01:13:15.892915Z"
+      },
+      "duration_seconds": 503.078243,
+      "covered_seconds": 503.07824300000004,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 51,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001188,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 503.07824300000004,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 51,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 503.07824300000004,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 51,
+          "weighted_mean_percent": 0.33387519421546846,
+          "max_percent": 6.619859578736208
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 503.07824300000004,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 51,
+          "weighted_mean_percent": 10.514924628116983,
+          "max_percent": 14.661069700304354
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 503.07824300000004,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 51,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 503.07824300000004,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 51,
+          "weighted_mean_percent": 10.686720694850264,
+          "max_percent": 14.711794544117197
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 503.07824300000004,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 51,
+          "weighted_mean_percent": 0.015660057321608627,
+          "max_percent": 0.1521627326329301
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 503.07824300000004,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 51,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 503.07824300000004,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 51,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "tiering-off-net10-ambientparent",
+      "start": "2026-11-10T01:13:14.967219Z",
+      "end": "2026-11-10T01:21:33.769269Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-10T01:13:05.891858Z",
+        "sample_at_or_after": "2026-11-10T01:13:15.892915Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-10T01:21:25.946333Z",
+        "sample_at_or_after": "2026-11-10T01:21:35.947431Z"
+      },
+      "duration_seconds": 498.80205,
+      "covered_seconds": 498.8020500000002,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 51,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001316,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 498.8020500000002,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 51,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 498.8020500000002,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 51,
+          "weighted_mean_percent": 0.713018517744083,
+          "max_percent": 14.343029087261785
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 498.8020500000002,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 51,
+          "weighted_mean_percent": 10.6540216026826,
+          "max_percent": 14.460814418469282
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 498.8020500000002,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 51,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 498.8020500000002,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 51,
+          "weighted_mean_percent": 10.825563608286696,
+          "max_percent": 14.6519035983015
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 498.8020500000002,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 51,
+          "weighted_mean_percent": 0.01821272443777929,
+          "max_percent": 0.10628829934845609
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 498.8020500000002,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 51,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 498.8020500000002,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 51,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "sdk-net10-root",
+      "start": "2026-11-10T01:21:33.961642Z",
+      "end": "2026-11-10T01:28:31.642783Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-10T01:21:25.946333Z",
+        "sample_at_or_after": "2026-11-10T01:21:35.947431Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-10T01:28:25.992055Z",
+        "sample_at_or_after": "2026-11-10T01:28:35.994047Z"
+      },
+      "duration_seconds": 417.681141,
+      "covered_seconds": 417.68114099999997,
+      "uncovered_seconds": 5.684341886080802e-14,
+      "coverage_fraction": 0.9999999999999999,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 43,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001992,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 417.68114099999997,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "weighted_mean_percent": 0.0023920352008614918,
+          "max_percent": 0.0999000999000999
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 417.68114099999997,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "weighted_mean_percent": 0.44911226712676594,
+          "max_percent": 12.337011033099298
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 417.68114099999997,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "weighted_mean_percent": 15.582833842640824,
+          "max_percent": 24.236938383837856
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 417.68114099999997,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 417.68114099999997,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "weighted_mean_percent": 15.899973559326687,
+          "max_percent": 24.607649203195017
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 417.68114099999997,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "weighted_mean_percent": 0.019427428361056747,
+          "max_percent": 0.10568819951630955
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 417.68114099999997,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 417.68114099999997,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "sdk-net10-nolisteners",
+      "start": "2026-11-10T01:28:31.834496Z",
+      "end": "2026-11-10T01:35:03.141248Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-10T01:28:25.992055Z",
+        "sample_at_or_after": "2026-11-10T01:28:35.994047Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-10T01:34:56.034018Z",
+        "sample_at_or_after": "2026-11-10T01:35:06.035064Z"
+      },
+      "duration_seconds": 391.306752,
+      "covered_seconds": 391.306752,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 40,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001992,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 391.306752,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 391.306752,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 0.6113972055052663,
+          "max_percent": 16.112789526686807
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 391.306752,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 13.675931757933915,
+          "max_percent": 17.427749074688116
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 391.306752,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 391.306752,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 14.024394701748522,
+          "max_percent": 17.580623189469502
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 391.306752,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 0.017688120763261223,
+          "max_percent": 0.15937245736340966
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 391.306752,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 391.306752,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "sdk-net10-createonly",
+      "start": "2026-11-10T01:35:03.333366Z",
+      "end": "2026-11-10T01:42:00.333774Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-10T01:34:56.034018Z",
+        "sample_at_or_after": "2026-11-10T01:35:06.035064Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-10T01:41:56.079529Z",
+        "sample_at_or_after": "2026-11-10T01:42:06.080594Z"
+      },
+      "duration_seconds": 417.000408,
+      "covered_seconds": 417.0004080000001,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 43,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.00118,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 417.0004080000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 417.0004080000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "weighted_mean_percent": 0.3666246499770442,
+          "max_percent": 5.71715145436309
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 417.0004080000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "weighted_mean_percent": 14.011296214428885,
+          "max_percent": 22.240498657545956
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 417.0004080000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 417.0004080000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "weighted_mean_percent": 14.362971418516457,
+          "max_percent": 22.696447576299995
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 417.0004080000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "weighted_mean_percent": 0.019814977015199294,
+          "max_percent": 0.11492702508693516
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 417.0004080000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 417.0004080000001,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 43,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "no-listener-repeat-net10",
+      "start": "2026-11-10T01:42:00.526948Z",
+      "end": "2026-11-10T01:48:32.094115Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-10T01:41:56.079529Z",
+        "sample_at_or_after": "2026-11-10T01:42:06.080594Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-10T01:48:26.120124Z",
+        "sample_at_or_after": "2026-11-10T01:48:36.121304Z"
+      },
+      "duration_seconds": 391.567167,
+      "covered_seconds": 391.56716700000004,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 40,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001196,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 391.56716700000004,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 391.56716700000004,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 1.0183988942345237,
+          "max_percent": 34.53815261044177
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 391.56716700000004,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 13.466920363306201,
+          "max_percent": 18.179543228317236
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 391.56716700000004,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 391.56716700000004,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 13.699773571185503,
+          "max_percent": 18.207740425942195
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 391.56716700000004,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "weighted_mean_percent": 0.017799187428958647,
+          "max_percent": 0.1483330084850906
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 391.56716700000004,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 391.56716700000004,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 40,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-repeat-net10-root",
+      "start": "2026-11-10T01:55:53.309015Z",
+      "end": "2026-11-10T02:02:41.996564Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-10T01:55:46.168691Z",
+        "sample_at_or_after": "2026-11-10T01:55:56.169862Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-10T02:02:36.213011Z",
+        "sample_at_or_after": "2026-11-10T02:02:46.214043Z"
+      },
+      "duration_seconds": 408.687549,
+      "covered_seconds": 408.68754899999993,
+      "uncovered_seconds": 5.684341886080802e-14,
+      "coverage_fraction": 0.9999999999999999,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 42,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001171,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 408.68754899999993,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 0.0024422355902139555,
+          "max_percent": 0.0998003992015968
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 408.68754899999993,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 0.5024352416232198,
+          "max_percent": 10.230692076228687
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 408.68754899999993,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 14.217410289841968,
+          "max_percent": 19.24801867741079
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 408.68754899999993,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 408.68754899999993,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 14.418637634323234,
+          "max_percent": 19.444637008120388
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 408.68754899999993,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 0.019715837628572406,
+          "max_percent": 0.10636845359291576
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 408.68754899999993,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 408.68754899999993,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-repeat-net10-ambientparent",
+      "start": "2026-11-10T02:02:42.188678Z",
+      "end": "2026-11-10T02:09:28.539764Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-10T02:02:36.213011Z",
+        "sample_at_or_after": "2026-11-10T02:02:46.214043Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-10T02:09:26.259326Z",
+        "sample_at_or_after": "2026-11-10T02:09:36.260398Z"
+      },
+      "duration_seconds": 406.351086,
+      "covered_seconds": 406.351086,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 42,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.00207,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 406.351086,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 406.351086,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 1.062720614338056,
+          "max_percent": 36.78391959798995
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 406.351086,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 14.470165398237636,
+          "max_percent": 19.109983431997616
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 406.351086,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 406.351086,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 14.813696795067445,
+          "max_percent": 19.276635584522023
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 406.351086,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "weighted_mean_percent": 0.019466090114549854,
+          "max_percent": 0.16691542149912375
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 406.351086,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 406.351086,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 42,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-repeat-net10-dropped",
+      "start": "2026-11-10T02:09:28.731628Z",
+      "end": "2026-11-10T02:16:38.012921Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-10T02:09:26.259326Z",
+        "sample_at_or_after": "2026-11-10T02:09:36.260398Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-10T02:16:36.304617Z",
+        "sample_at_or_after": "2026-11-10T02:16:46.306127Z"
+      },
+      "duration_seconds": 429.281293,
+      "covered_seconds": 429.281293,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 44,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.00151,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 429.281293,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 429.281293,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 0.25458421544461046,
+          "max_percent": 7.236180904522613
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 429.281293,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 13.655763468589777,
+          "max_percent": 21.86947157939954
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 429.281293,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 429.281293,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 13.880379387473752,
+          "max_percent": 22.379178243715295
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 429.281293,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "weighted_mean_percent": 0.016600951066464226,
+          "max_percent": 0.12152588139757295
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 429.281293,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 429.281293,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 44,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "activity-repeat-net10-suppliedcontext",
+      "start": "2026-11-10T02:16:38.205266Z",
+      "end": "2026-11-10T02:24:41.612111Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-10T02:16:36.304617Z",
+        "sample_at_or_after": "2026-11-10T02:16:46.306127Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-10T02:24:36.358270Z",
+        "sample_at_or_after": "2026-11-10T02:24:46.359363Z"
+      },
+      "duration_seconds": 483.406845,
+      "covered_seconds": 483.406845,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 49,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001849,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 483.406845,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 483.406845,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "weighted_mean_percent": 0.26463014807776225,
+          "max_percent": 5.015045135406218
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 483.406845,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "weighted_mean_percent": 13.735635546279441,
+          "max_percent": 18.049489134350356
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 483.406845,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 483.406845,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "weighted_mean_percent": 14.007649738937292,
+          "max_percent": 18.207202874384265
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 483.406845,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "weighted_mean_percent": 0.017733782824206817,
+          "max_percent": 0.1167350660385952
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 483.406845,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 483.406845,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 49,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "link-sampling-root-net10",
+      "start": "2026-11-10T01:48:32.287688Z",
+      "end": "2026-11-10T01:52:07.507880Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-10T01:48:26.120124Z",
+        "sample_at_or_after": "2026-11-10T01:48:36.121304Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-10T01:52:06.144433Z",
+        "sample_at_or_after": "2026-11-10T01:52:16.145572Z"
+      },
+      "duration_seconds": 215.220192,
+      "covered_seconds": 215.22019200000003,
+      "uncovered_seconds": 0.0,
+      "coverage_fraction": 1.0,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 23,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001695,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 215.22019200000003,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 23,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 215.22019200000003,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 23,
+          "weighted_mean_percent": 0.43782449133743834,
+          "max_percent": 5.527638190954774
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 215.22019200000003,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 23,
+          "weighted_mean_percent": 13.868180960901109,
+          "max_percent": 18.71350081683633
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 215.22019200000003,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 23,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 215.22019200000003,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 23,
+          "weighted_mean_percent": 14.189977583038381,
+          "max_percent": 18.872783885573618
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 215.22019200000003,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 23,
+          "weighted_mean_percent": 0.020229909099926648,
+          "max_percent": 0.12015632489194668
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 215.22019200000003,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 23,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 215.22019200000003,
+          "coverage_fraction": 1.0,
+          "complete_coverage": true,
+          "overlapping_intervals": 23,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    },
+    {
+      "name": "link-sampling-existing-net10",
+      "start": "2026-11-10T01:52:07.688502Z",
+      "end": "2026-11-10T01:55:34.727860Z",
+      "start_boundary": {
+        "sample_at_or_before": "2026-11-10T01:52:06.144433Z",
+        "sample_at_or_after": "2026-11-10T01:52:16.145572Z"
+      },
+      "end_boundary": {
+        "sample_at_or_before": "2026-11-10T01:55:26.166547Z",
+        "sample_at_or_after": "2026-11-10T01:55:36.167627Z"
+      },
+      "duration_seconds": 207.039358,
+      "covered_seconds": 207.03935799999996,
+      "uncovered_seconds": 2.842170943040401e-14,
+      "coverage_fraction": 0.9999999999999999,
+      "complete_coverage": true,
+      "complete_metric_coverage": true,
+      "overlapping_intervals": 21,
+      "long_intervals": 0,
+      "maximum_interval_seconds": 10.001317,
+      "metrics": {
+        "cpu3.steal_percent": {
+          "coverage_seconds": 207.03935799999996,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 21,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "cpu11.execution_busy_percent": {
+          "coverage_seconds": 207.03935799999996,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 21,
+          "weighted_mean_percent": 0.4075789782483102,
+          "max_percent": 3.6180904522613067
+        },
+        "host_cpu_pressure.some": {
+          "coverage_seconds": 207.03935799999996,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 21,
+          "weighted_mean_percent": 13.869634995301482,
+          "max_percent": 17.889361227484347
+        },
+        "host_cpu_pressure.full": {
+          "coverage_seconds": 207.03935799999996,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 21,
+          "weighted_mean_percent": 0.0,
+          "max_percent": 0.0
+        },
+        "session_cpu_pressure.some": {
+          "coverage_seconds": 207.03935799999996,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 21,
+          "weighted_mean_percent": 14.160137773553563,
+          "max_percent": 18.087961036272976
+        },
+        "session_cpu_pressure.full": {
+          "coverage_seconds": 207.03935799999996,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 21,
+          "weighted_mean_percent": 0.02169523835290487,
+          "max_percent": 0.12015632489194668
+        },
+        "session_cpu_stat.nr_throttled": {
+          "coverage_seconds": 207.03935799999996,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 21,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "events"
+        },
+        "session_cpu_stat.throttled_usec": {
+          "coverage_seconds": 207.03935799999996,
+          "coverage_fraction": 0.9999999999999999,
+          "complete_coverage": true,
+          "overlapping_intervals": 21,
+          "estimated_total": 0.0,
+          "weighted_mean_per_second": 0.0,
+          "max_per_second": 0.0,
+          "unit": "microseconds"
+        }
+      }
+    }
+  ],
+  "aggregate_union": {
+    "spans": [
+      {
+        "start": "2026-11-09T21:11:39.954199Z",
+        "end": "2026-11-09T21:18:06.693362Z"
+      },
+      {
+        "start": "2026-11-09T21:41:04.059578Z",
+        "end": "2026-11-09T21:47:39.289237Z"
+      },
+      {
+        "start": "2026-11-09T21:47:39.482850Z",
+        "end": "2026-11-09T21:54:43.596385Z"
+      },
+      {
+        "start": "2026-11-09T21:54:43.787646Z",
+        "end": "2026-11-09T22:01:44.222259Z"
+      },
+      {
+        "start": "2026-11-09T22:01:44.414151Z",
+        "end": "2026-11-09T22:08:50.452579Z"
+      },
+      {
+        "start": "2026-11-09T22:08:50.643523Z",
+        "end": "2026-11-09T22:15:43.557615Z"
+      },
+      {
+        "start": "2026-11-09T22:15:43.749373Z",
+        "end": "2026-11-09T22:22:30.296218Z"
+      },
+      {
+        "start": "2026-11-09T22:22:30.487949Z",
+        "end": "2026-11-09T22:29:38.941807Z"
+      },
+      {
+        "start": "2026-11-09T22:29:39.132677Z",
+        "end": "2026-11-09T22:37:39.882257Z"
+      },
+      {
+        "start": "2026-11-09T22:37:40.073815Z",
+        "end": "2026-11-09T22:44:28.425734Z"
+      },
+      {
+        "start": "2026-11-09T22:44:28.617076Z",
+        "end": "2026-11-09T22:51:44.814488Z"
+      },
+      {
+        "start": "2026-11-09T22:51:45.006986Z",
+        "end": "2026-11-09T22:58:20.923800Z"
+      },
+      {
+        "start": "2026-11-09T22:58:21.115456Z",
+        "end": "2026-11-09T23:05:27.237319Z"
+      },
+      {
+        "start": "2026-11-09T23:05:27.428524Z",
+        "end": "2026-11-09T23:11:59.663621Z"
+      },
+      {
+        "start": "2026-11-09T23:11:59.856836Z",
+        "end": "2026-11-09T23:19:38.848359Z"
+      },
+      {
+        "start": "2026-11-09T23:19:39.039587Z",
+        "end": "2026-11-09T23:26:55.587923Z"
+      },
+      {
+        "start": "2026-11-09T23:26:55.778697Z",
+        "end": "2026-11-09T23:34:32.135086Z"
+      },
+      {
+        "start": "2026-11-09T23:34:32.327899Z",
+        "end": "2026-11-09T23:42:15.369785Z"
+      },
+      {
+        "start": "2026-11-09T23:42:15.561750Z",
+        "end": "2026-11-09T23:50:15.451801Z"
+      },
+      {
+        "start": "2026-11-09T23:50:15.644647Z",
+        "end": "2026-11-09T23:58:09.153338Z"
+      },
+      {
+        "start": "2026-11-09T23:58:09.346957Z",
+        "end": "2026-11-10T00:05:56.473383Z"
+      },
+      {
+        "start": "2026-11-10T00:05:56.665362Z",
+        "end": "2026-11-10T00:13:13.727043Z"
+      },
+      {
+        "start": "2026-11-10T00:13:13.919225Z",
+        "end": "2026-11-10T00:20:52.449821Z"
+      },
+      {
+        "start": "2026-11-10T00:20:52.641775Z",
+        "end": "2026-11-10T00:28:35.823605Z"
+      },
+      {
+        "start": "2026-11-10T00:28:36.015439Z",
+        "end": "2026-11-10T00:36:39.025859Z"
+      },
+      {
+        "start": "2026-11-10T00:36:39.217011Z",
+        "end": "2026-11-10T00:44:35.479397Z"
+      },
+      {
+        "start": "2026-11-10T00:44:35.671788Z",
+        "end": "2026-11-10T00:50:52.457250Z"
+      },
+      {
+        "start": "2026-11-10T00:50:52.648602Z",
+        "end": "2026-11-10T00:56:30.435775Z"
+      },
+      {
+        "start": "2026-11-10T00:56:30.628545Z",
+        "end": "2026-11-10T01:04:51.503655Z"
+      },
+      {
+        "start": "2026-11-10T01:04:51.695457Z",
+        "end": "2026-11-10T01:13:14.773700Z"
+      },
+      {
+        "start": "2026-11-10T01:13:14.967219Z",
+        "end": "2026-11-10T01:21:33.769269Z"
+      },
+      {
+        "start": "2026-11-10T01:21:33.961642Z",
+        "end": "2026-11-10T01:28:31.642783Z"
+      },
+      {
+        "start": "2026-11-10T01:28:31.834496Z",
+        "end": "2026-11-10T01:35:03.141248Z"
+      },
+      {
+        "start": "2026-11-10T01:35:03.333366Z",
+        "end": "2026-11-10T01:42:00.333774Z"
+      },
+      {
+        "start": "2026-11-10T01:42:00.526948Z",
+        "end": "2026-11-10T01:48:32.094115Z"
+      },
+      {
+        "start": "2026-11-10T01:48:32.287688Z",
+        "end": "2026-11-10T01:52:07.507880Z"
+      },
+      {
+        "start": "2026-11-10T01:52:07.688502Z",
+        "end": "2026-11-10T01:55:34.727860Z"
+      },
+      {
+        "start": "2026-11-10T01:55:53.309015Z",
+        "end": "2026-11-10T02:02:41.996564Z"
+      },
+      {
+        "start": "2026-11-10T02:02:42.188678Z",
+        "end": "2026-11-10T02:09:28.539764Z"
+      },
+      {
+        "start": "2026-11-10T02:09:28.731628Z",
+        "end": "2026-11-10T02:16:38.012921Z"
+      },
+      {
+        "start": "2026-11-10T02:16:38.205266Z",
+        "end": "2026-11-10T02:24:41.612111Z"
+      }
+    ],
+    "duration_seconds": 17378.422922,
+    "covered_seconds": 17378.422922000012,
+    "uncovered_seconds": 0.0,
+    "coverage_fraction": 1.0,
+    "complete_coverage": true,
+    "complete_metric_coverage": true,
+    "overlapping_intervals": 1742,
+    "long_intervals": 0,
+    "maximum_interval_seconds": 10.002088,
+    "metrics": {
+      "cpu3.steal_percent": {
+        "coverage_seconds": 17378.422922000012,
+        "coverage_fraction": 1.0,
+        "complete_coverage": true,
+        "overlapping_intervals": 1742,
+        "weighted_mean_percent": 0.0005172660527235881,
+        "max_percent": 0.1
+      },
+      "cpu11.execution_busy_percent": {
+        "coverage_seconds": 17378.422922000012,
+        "coverage_fraction": 1.0,
+        "complete_coverage": true,
+        "overlapping_intervals": 1742,
+        "weighted_mean_percent": 0.49773073992967054,
+        "max_percent": 36.78391959798995
+      },
+      "host_cpu_pressure.some": {
+        "coverage_seconds": 17378.422922000012,
+        "coverage_fraction": 1.0,
+        "complete_coverage": true,
+        "overlapping_intervals": 1742,
+        "weighted_mean_percent": 13.088813402228512,
+        "max_percent": 24.236938383837856
+      },
+      "host_cpu_pressure.full": {
+        "coverage_seconds": 17378.422922000012,
+        "coverage_fraction": 1.0,
+        "complete_coverage": true,
+        "overlapping_intervals": 1742,
+        "weighted_mean_percent": 0.0,
+        "max_percent": 0.0
+      },
+      "session_cpu_pressure.some": {
+        "coverage_seconds": 17378.422922000012,
+        "coverage_fraction": 1.0,
+        "complete_coverage": true,
+        "overlapping_intervals": 1742,
+        "weighted_mean_percent": 13.385665416486212,
+        "max_percent": 24.607649203195017
+      },
+      "session_cpu_pressure.full": {
+        "coverage_seconds": 17378.422922000012,
+        "coverage_fraction": 1.0,
+        "complete_coverage": true,
+        "overlapping_intervals": 1742,
+        "weighted_mean_percent": 0.018915688132927877,
+        "max_percent": 0.1817370996816578
+      },
+      "session_cpu_stat.nr_throttled": {
+        "coverage_seconds": 17378.422922000012,
+        "coverage_fraction": 1.0,
+        "complete_coverage": true,
+        "overlapping_intervals": 1742,
+        "estimated_total": 0.0,
+        "weighted_mean_per_second": 0.0,
+        "max_per_second": 0.0,
+        "unit": "events"
+      },
+      "session_cpu_stat.throttled_usec": {
+        "coverage_seconds": 17378.422922000012,
+        "coverage_fraction": 1.0,
+        "complete_coverage": true,
+        "overlapping_intervals": 1742,
+        "estimated_total": 0.0,
+        "weighted_mean_per_second": 0.0,
+        "max_per_second": 0.0,
+        "unit": "microseconds"
+      }
+    }
+  },
+  "complete_coverage": true,
+  "complete_metric_coverage": true,
+  "metric_issues_in_accepted_windows": [],
+  "packaged_snapshot": {
+    "original_source": "/tmp/process-context-host-monitor-20261109.jsonl",
+    "artifact": "host-monitor.jsonl.gz",
+    "uncompressed_sha256": "a66bef668e44d4341a06c2c1e0c9a7b44b28ca181e737d4f546a33ea1ed8a476",
+    "note": "Summary and deterministic gzip retain the same complete-record snapshot bytes."
+  }
+}

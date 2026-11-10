@@ -1,0 +1,60 @@
+{
+  "capturedUtc": "2026-11-09T21:51:54.893696+00:00",
+  "controllerAffinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "cgroups": [
+    {
+      "/sys/fs/cgroup/user.slice/user-1002.slice/session-7369.scope": {
+        "cpu.max": "max 100000",
+        "cpu.weight": "100",
+        "cpuset.cpus.effective": null
+      }
+    },
+    {
+      "/sys/fs/cgroup/user.slice/user-1002.slice": {
+        "cpu.max": "max 100000",
+        "cpu.weight": "100",
+        "cpuset.cpus.effective": null
+      }
+    },
+    {
+      "/sys/fs/cgroup/user.slice": {
+        "cpu.max": "max 100000",
+        "cpu.weight": "100",
+        "cpuset.cpus.effective": "0-15"
+      }
+    },
+    {
+      "/sys/fs/cgroup": {
+        "cpu.max": null,
+        "cpu.weight": null,
+        "cpuset.cpus.effective": "0-15"
+      }
+    }
+  ],
+  "files": {
+    "/proc/sys/kernel/perf_event_paranoid": "4",
+    "/sys/devices/system/cpu/cpu3/topology/thread_siblings_list": "3,11",
+    "/sys/devices/system/cpu/cpu3/cpufreq/scaling_governor": null,
+    "/sys/devices/system/cpu/cpu3/cpufreq/scaling_cur_freq": null,
+    "/sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq": null,
+    "/sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq": null,
+    "/sys/devices/system/cpu/cpufreq/boost": null
+  }
+}

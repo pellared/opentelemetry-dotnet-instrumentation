@@ -1,0 +1,33 @@
+{
+  "arguments": {
+    "name": "no-listener-net10",
+    "runtime": "net10.0",
+    "cases": "ManualParent,AutomaticParent,ManualLink,AutomaticLink",
+    "methods": [
+      "NoListeners"
+    ],
+    "tiering": null,
+    "sdk": false,
+    "launches": "3",
+    "blocks": "4"
+  },
+  "command": [
+    "dotnet",
+    "/home/splunker/process-context-perf/bin/Release/net10.0/ProcessContextPerf.dll",
+    "--filter",
+    "ActivityFactoryBenchmarks.NoListeners",
+    "--artifacts",
+    "/home/splunker/process-context-perf/results/no-listener-net10/bdn"
+  ],
+  "start": 1794258699.9541986,
+  "environment": {
+    "PROCESS_BENCH_REPO": "/home/splunker/opentelemetry-dotnet-instrumentation",
+    "PROCESS_BENCH_RUNTIME": "net10.0",
+    "PROCESS_BENCH_CASES": "ManualParent,AutomaticParent,ManualLink,AutomaticLink",
+    "PROCESS_BENCH_LAUNCHES": "3",
+    "PROCESS_BENCH_SDK": "false",
+    "PROCESS_BENCH_BLOCKS": "4"
+  },
+  "end": 1794259086.6933618,
+  "exitCode": 0
+}
