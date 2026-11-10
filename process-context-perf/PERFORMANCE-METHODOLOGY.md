@@ -255,6 +255,14 @@ runtime-only result minus the attached control, the reverse of an
 attached-profiler premium. Intervals spanning zero are reported as unresolved
 at this precision, rather than establishing a speedup or zero cost.
 
+The result tables also show a percentage point estimate:
+`100 × (candidate aggregate mean − baseline aggregate mean) / baseline aggregate mean`.
+This uses unrounded, equal-weight aggregate process means; it is distinct from
+the mean of paired ratios reported by the per-cohort analyzer. Raw Actual
+percentages use raw Actual means. The confidence intervals remain in ns/op;
+no percentage confidence interval is inferred by dividing their endpoints.
+A nonpositive or nonfinite baseline is reported as `n/a` (`null` in JSON).
+
 ## Provenance and audit scope
 
 `manifest.json` records the implementation commit and clean status, host

@@ -224,6 +224,16 @@ def interval(values):
     return mean, mean - margin, mean + margin
 
 
+def percentage_change(candidate, baseline):
+    if not math.isfinite(candidate) or not math.isfinite(baseline) or baseline <= 0:
+        return None
+    return 100 * (candidate - baseline) / baseline
+
+
+def percentage(value):
+    return "n/a" if value is None else f"{value:+.2f}%"
+
+
 def aggregate(states):
     expected, observed = {}, {}
     for state in states:
@@ -242,10 +252,16 @@ def aggregate(states):
         require(len(pairs) == 4 * len({p["cohort"] for p in pairs}), f"Incomplete cohort in comparison: {key}")
         delta = interval([p["candidate_mean"] - p["baseline_mean"] for p in pairs])
         raw = interval([p["candidate_actual"] - p["baseline_actual"] for p in pairs])
+        baseline = statistics.mean(p["baseline_mean"] for p in pairs)
+        candidate = statistics.mean(p["candidate_mean"] for p in pairs)
+        baseline_actual = statistics.mean(p["baseline_actual"] for p in pairs)
+        candidate_actual = statistics.mean(p["candidate_actual"] for p in pairs)
         rows[key] = {
             "key": key, "pairs": pairs, "n": len(pairs), "expected_n": 4 * len(expected[key]),
-            "baseline": statistics.mean(p["baseline_mean"] for p in pairs),
-            "candidate": statistics.mean(p["candidate_mean"] for p in pairs),
+            "baseline": baseline, "candidate": candidate,
+            "baseline_actual": baseline_actual, "candidate_actual": candidate_actual,
+            "percent_change": percentage_change(candidate, baseline),
+            "actual_percent_change": percentage_change(candidate_actual, baseline_actual),
             "delta": delta, "raw_delta": raw,
             "allocation_delta": statistics.mean(p["candidate_bytes"] - p["baseline_bytes"] for p in pairs),
         }
@@ -289,6 +305,9 @@ def render(states, rows, expected, results_root, output, json_output):
              "overhead subtraction. Each number is an equal-weight mean of independently launched process means. "
              "Δ is candidate minus baseline; brackets give a pointwise paired two-sided Student t95 interval on block differences. "
              "The primary baseline has the same profiler attached with PROCESS disabled and cached equivalent manual parent/link input.", "",
+             "Δ % = 100 × (candidate mean − baseline mean) / baseline mean, using the unrounded aggregate process means. "
+             "Percentages are point estimates, not means of paired percentages; the confidence intervals remain absolute ns/op. "
+             "Raw Actual percentages use raw Actual means. A nonpositive or nonfinite baseline produces n/a.", "",
              "Primary profiles use a minimal application ActivityListener with no application TracerProvider or exporters. "
              "Attached profiles still initialize SDK globals. A target-metadata SDK value of none means no application provider; "
              "it does not mean SDK assemblies are absent.", "",
@@ -327,41 +346,43 @@ def render(states, rows, expected, results_root, output, json_output):
             lines += ["Separate LinkSamplingBenchmarks class: the sampler enumerates links and records only when it sees "
                       "the incoming trace/span IDs. Both manual and automatic cases validate equivalent recorded activities. "
                       "These results are kept separate from the primary listener that does not inspect recorded-source links.", ""]
-        lines += ["| Workload | Comparison | Blocks | Baseline → candidate ns/op | Δ ns/op [95% CI] | Δ B/op |",
-                  "| --- | --- | ---: | ---: | ---: | ---: |"]
+        lines += ["| Workload | Comparison | Blocks | Baseline → candidate ns/op | Δ ns/op [95% CI] | Δ % | Δ B/op |",
+                  "| --- | --- | ---: | ---: | ---: | ---: | ---: |"]
         for row in available:
             _, method, candidate, baseline = row["key"]
             mode = "parent" if candidate == "AutomaticParent" else "link" if candidate == "AutomaticLink" else f"{baseline} → {candidate}"
             count = str(row["n"]) if row["n"] == row["expected_n"] else f"{row['n']}/{row['expected_n']}"
             lines.append(f"| {method} | {mode} | {count} | {number(row['baseline'])} → {number(row['candidate'])} "
-                         f"| {ci(row['delta'])} | {number(row['allocation_delta'])} |")
+                         f"| {ci(row['delta'])} | {percentage(row['percent_change'])} | {number(row['allocation_delta'])} |")
         lines += ["", "<details>", "<summary>Process ranges and raw Actual comparisons</summary>", "",
                   "Ranges are minimum–maximum process means, rather than iteration ranges. Overhead ranges use each process's "
                   "median empty-loop overhead. Raw Actual deltas include that loop overhead; they are useful when subtraction "
                   "is a material fraction of the factory time.", "",
-                  "| Workload | Comparison | Result process-mean ranges: baseline → candidate | Raw Actual Δ ns/op [95% CI] | Overhead median ranges: baseline → candidate | B/op ranges: baseline → candidate |",
-                  "| --- | --- | ---: | ---: | ---: | ---: |"]
+                  "| Workload | Comparison | Result process-mean ranges: baseline → candidate | Raw Actual Δ ns/op [95% CI] | Raw Actual Δ % | Overhead median ranges: baseline → candidate | B/op ranges: baseline → candidate |",
+                  "| --- | --- | ---: | ---: | ---: | ---: | ---: |"]
         for row in available:
             _, method, candidate, baseline = row["key"]
             mode = "parent" if candidate == "AutomaticParent" else "link" if candidate == "AutomaticLink" else f"{baseline} → {candidate}"
             pairs = row["pairs"]
             ranges = lambda field: value_range([p[field] for p in pairs])
             lines.append(f"| {method} | {mode} | {ranges('baseline_mean')} → {ranges('candidate_mean')} "
-                         f"| {ci(row['raw_delta'])} | {ranges('baseline_overhead')} → {ranges('candidate_overhead')} "
+                         f"| {ci(row['raw_delta'])} | {percentage(row['actual_percent_change'])} | {ranges('baseline_overhead')} → {ranges('candidate_overhead')} "
                          f"| {ranges('baseline_bytes')} → {ranges('candidate_bytes')} |")
         lines += ["", "</details>", "", "<details>",
                   "<summary>All paired process means, with distinct cohort/block IDs</summary>", "",
                   "Values are rounded here; the linked source analysis preserves full precision and all iterations. "
                   "A control-baseline process can appear in more than one comparison.", "",
-                  "| Workload | Comparison | Cohort/block | Baseline Result | Candidate Result | Baseline Actual | Candidate Actual | Baseline B/op | Candidate B/op |",
-                  "| --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |"]
+                  "| Workload | Comparison | Cohort/block | Baseline Result | Candidate Result | Result Δ % | Baseline Actual | Candidate Actual | Actual Δ % | Baseline B/op | Candidate B/op |",
+                  "| --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |"]
         for row in available:
             _, method, candidate, baseline = row["key"]
             mode = "parent" if candidate == "AutomaticParent" else "link" if candidate == "AutomaticLink" else f"{baseline} → {candidate}"
             for pair in sorted(row["pairs"], key=lambda item: (item["cohort"], item["block"])):
                 lines.append(f"| {method} | {mode} | {pair['block_id']} | {number(pair['baseline_mean'])} "
-                             f"| {number(pair['candidate_mean'])} | {number(pair['baseline_actual'])} "
-                             f"| {number(pair['candidate_actual'])} | {number(pair['baseline_bytes'])} | {number(pair['candidate_bytes'])} |")
+                             f"| {number(pair['candidate_mean'])} | {percentage(percentage_change(pair['candidate_mean'], pair['baseline_mean']))} "
+                             f"| {number(pair['baseline_actual'])} | {number(pair['candidate_actual'])} "
+                             f"| {percentage(percentage_change(pair['candidate_actual'], pair['baseline_actual']))} "
+                             f"| {number(pair['baseline_bytes'])} | {number(pair['candidate_bytes'])} |")
         lines += ["", "</details>", ""]
     probes = {}
     for state in states:
@@ -438,6 +459,10 @@ def aggregate_document(states, rows, expected, root, complete):
             "degrees_of_freedom": row["n"] - 1, "t95_critical": T95[row["n"] - 1],
             "cohorts": sorted({pair["cohort"] for pair in pairs}),
             "baseline_process_mean_ns": row["baseline"], "candidate_process_mean_ns": row["candidate"],
+            "percent_change": row["percent_change"],
+            "baseline_actual_process_mean_ns": row["baseline_actual"],
+            "candidate_actual_process_mean_ns": row["candidate_actual"],
+            "actual_percent_change": row["actual_percent_change"],
             "delta_mean_ns": row["delta"][0], "delta_ci95_low_ns": row["delta"][1], "delta_ci95_high_ns": row["delta"][2],
             "actual_delta_mean_ns": row["raw_delta"][0], "actual_delta_ci95_low_ns": row["raw_delta"][1],
             "actual_delta_ci95_high_ns": row["raw_delta"][2],
@@ -464,6 +489,8 @@ def aggregate_document(states, rows, expected, root, complete):
         "schema_version": 1, "generated_utc": datetime.now(timezone.utc).isoformat(), "complete": complete,
         "statistical_unit": "Independently launched process means, paired by distinct cohort/block ID.",
         "interval": "Nominal pointwise paired two-sided Student t95; no sequential-selection or multiplicity adjustment.",
+        "percentage_change": "100 * (candidate aggregate process mean - baseline aggregate process mean) / baseline aggregate process mean; "
+                             "point estimate only, not mean paired percentages. Nonpositive/nonfinite baselines produce null.",
         "selection_note": "One extra four-block cohort for Root, NoListeners, Dropped, AmbientParent, and SuppliedContext "
                           "was selected after between-process variation was observed, not by direction/significance; the base plan was frozen.",
         "all_measured_iterations_retained": True,
